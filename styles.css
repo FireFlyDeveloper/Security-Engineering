@@ -71,6 +71,8 @@ img {
 
 main p {
     width: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 section {
