@@ -1,6 +1,12 @@
 :root {
     --theme: #dfe4ea;
-    --footer: #333;
+    --footer: #57606f;
+    --header: #57606f;
+    --nav-hover: #1e90ff;
+    --nav: #444;
+    --header-font-color: white;
+    --nav-font-color: white;
+    --footer-font-color: white;
 }
 
 body {
@@ -8,17 +14,19 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--theme);
+    justify-content: center;
+    align-items: center;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--header);
+    color: var(--header-font-color);
     padding: 1rem;
     text-align: center;
 }
 
 nav {
-    background-color: #444;
+    background-color: var(--nav);
     padding: 0.5rem;
 }
 
@@ -35,12 +43,34 @@ nav li {
 }
 
 nav a {
-    color: white;
+    color: var(--nav-font-color);
     text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: var(--nav-hover);
+    transform: scale(1.1);
+}
+
+nav ul li {
+    padding: 10px;
+    border-radius: 0.5em;
 }
 
 main {
     padding: 2rem;
+    width: 70%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+    margin: 2rem auto;
+    border-radius: 1rem;
+}
+
+main p {
+    width: auto;
 }
 
 section {
@@ -60,13 +90,13 @@ footer li {
 }
 
 footer a {
-    color: white;
+    color: var(--footer-font-color);
     text-decoration: none;
 }
 
 footer {
     background-color: var(--footer);
-    color: white;
+    color: var(--footer-font-color);
     text-align: center;
     padding: 1rem;
 }
