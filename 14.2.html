@@ -4,39 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14.2: Design for security</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #333; color: white; padding: 1rem; text-align: center; }
-        nav { background-color: #444; padding: 0.5rem; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; }
-        main { padding: 2rem; }
-        section { margin-bottom: 2rem; }
-        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
-    </style>
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
-<body>
-    
+<body id="DAVID">
 
-    <header>
+    <header class="head" id="home">
 
-        <H1> 14.2: Design for Security </H1>
+        <h1 id="title">Design for Security </h1>
 
-        <nav>
-        <ul>
-            <li><a href="index.html">Introduction</a></li>
-            <li><a href="14.1.html">Security Risk Management</button></li>
-            <li><a href="14.2.html">Design for Security</a></li>
-            <li><a href="14.3.html">System Survivability</a></li>
-        </ul>
-    </nav>
+        <nav class="list">
+            <ul class="pindot">
+                <li><a href="index.html">Introduction</a></li>
+                <li><a href="14.1.html">Security Risk Management</a></li>
+                <li><a href="14.2.html">Design for Security</a></li>
+                <li><a href="14.3.html">System Survivability</a></li>
+            </ul>
+        </nav>
+
+        
     </header>
 
-    <main>
+    <main id="main">
+        <div class="sticky pr-10 top-8 left-3 h-max w-max ml-4 mt-2 mr-4 p-4 bg-gray-800 rounded-lg shadow-md">
+            <aside class="text-left flex flex-col text-[var(--light)] no-underline font-medium text-base transition-colors duration-300">
+                <p class=" italic mb-3 text-white ">Subtopics</p>
+                <ol class="flex flex-col space-y-3">
+                <a href="#home" class=" ml-4 pl-2 pr-40 text-white hover:text-gray-400 ">Home</a>
+                <a href="#forwan" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.1 Architectural design</a>
+                <a href="#fortu" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.2 Design Guidelines</a>
+                <a href="#fortri" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.3 Another Topic</a>
+                </ol>
+            </aside>
+        </div>
+
         <section>
-        
-            <article>
+            <article class="articles">
                     <p>It is generally true that it is very difficult to add security to a system after it has been
                         implemented. Therefore, you need to take security issues into account during the
                         systems design process. In this section, I focus primarily on issues of system design,
@@ -49,28 +53,28 @@
                         Here, I focus on a number of general, application-independent issues relevant to
                         secure systems design:
                     </p>
-                    <ol>
-                        <li> Architectural design—how do architectural design decisions affect the security
-                            of a system?
-                        </li>
-                        <li>
-                            Good practice—what is accepted good practice when designing secure systems?
-                        </li>
-                        <li>
-                            Design for deployment—what support should be designed into systems to avoid
-                            the introduction of vulnerabilities when a system is deployed for use?
-                        </li>
-                    </ol>
+                        <ol class="list-dics pl-6 list-inside space-y-2">
+                            <li> <b>Architectural design</b>— how do architectural design decisions affect the security
+                                of a system?
+                            </li>
+                            <li>
+                                <b>Good practice</b>— what is accepted good practice when designing secure systems?
+                            </li>
+                            <li>
+                                <b>Design for deployment</b>—what support should be designed into systems to avoid
+                                the introduction of vulnerabilities when a system is deployed for use?
+                            </li>
+                        </ol>
             </article>
-
-            <article>
-                <h2>Denial of service attacks</h2>
+ 
+            <article class="articles">
+                <h1 class=" text-3xl mb-2">Denial of service attacks</h1>
                     <p>Denial of service attacks attempt to bring down a networked system by bombarding it with a huge number of
                         service requests. These place a load on the system for which it was not designed and they exclude legitimate
                         requests for system service. Consequently, the system may become unavailable either because it crashes with
                         the heavy load or has to be taken offline by system managers to stop the flow of requests. </p>
                     
-                    <a href="">http://www.SoftwareEngineering-9.com/Web/Security/DoS.html</a>
+                    <a href="http://www.SoftwareEngineering-9.com/Web/Security/DoS.html">http://www.SoftwareEngineering-9.com/Web/Security/DoS.html</a>
                     
                     <p>Of course, these are not the only design issues that are important for security. Every
                         application is different and security design also has to take into account the purpose,
@@ -96,8 +100,8 @@
                         require frequent checks. In a system for stock trading, however, interruptions of
                         operation for security checks would be completely unacceptable.</p>
             </article>
-            <article>
-                        <h3>14.2.1 Architectural design</h3>
+            <article id="forwan" class="articles">
+                        <h3  class="text-3xl mb-2"><b>14.2.1 Architectural design</b></h3>
                         <p>________________________________________________________________________________________________</p>
             
                         <p>As I have discussed in Chapter 11, the choice of software architecture can have
@@ -190,9 +194,9 @@
                                     with the system client and agree on how these are to be resolved.</p>
             </article>
 
-            <article>
+            <article id="fortu" class="articles">
 
-                <h3>14.2.2 Design Guidelines</h3>
+                <h3  class="text-3xl mb-2"><b>14.2.2 Design Guidelines</b></h3>
                         <p>________________________________________________________________________________________________</p>
             
                 <p>There are no hard and fast rules about how to achieve system security. Different
@@ -221,8 +225,8 @@
                         2003). I have focused here on guidelines that are particularly applicable to the software specification and design processes. More general principles, such as ‘Secure
                         the weakest link in a system’, ‘Keep it simple’, and ‘Avoid security through obscurity’ are also important but are less directly relevant to engineering decision making.</p>
             </article>
-            <article>
-                <h2>Guideline 1: Base security decisions on an explicit security policy</h2>
+            <article class="articles">
+                <h2 class="text-2xl"><b>Guideline 1: Base security decisions on an explicit security policy</b></h2>
                     <p>A security policy is a high-level statement that sets out fundamental security conditions for an organization. It defines the ‘what’ of security rather than the ‘how’, so
                         the policy should not define the mechanisms to be used to provide and enforce security. In principle, all aspects of the security policy should be reflected in the system
                         requirements. In practice, especially if a rapid application development process is
@@ -241,8 +245,8 @@
                         <p><b>Figure 14.6</b>  Design guidelines for secure systems engineering</p>
                     </article>
 
-                    <article>
-                        <h2><b>Guideline 2:</b> Avoid a single point of failure</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 2: Avoid a single point of failure</b></h2>
                     
                         <p>In any critical system, it is good design practice to try to avoid a single point of failure. This means that a single failure in part of the system should not result in an overall systems failure. In security terms, this means that you should not rely on a single
                             mechanism to ensure security, rather you should employ several different techniques. This is sometimes called ‘defense in depth’</p>
@@ -256,8 +260,8 @@
                         </p>
                     </article>
 
-                    <article>
-                        <h2> Fail securely</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"> <b>Guileline 3: Fail securely</b></h2>
                         <p>System failures are inevitable in all systems and, in the same way that safety-critical
                             systems should always fail-safe, security critical systems should always ‘failsecure’. When the system fails, you should not use fallback procedures that are less
                             secure than the system itself. Nor should system failure mean that an attacker can
@@ -271,8 +275,8 @@
                             stored on the client. This means that an unauthorized user cannot read the data.</p>
                     </article>
 
-                    <article>
-                        <h2>Guideline 4: Balance security and usability</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 4: Balance security and usability</b></h2>
 
                             <p>The demands of security and usability are often contradictory. To make a system secure,
                                 you have to introduce checks that users are authorized to use the system and that they
@@ -290,8 +294,8 @@
 
                     </article>
 
-                    <article>
-                        <h2>Guideline 5: Log user actions</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 5: Log user actions</b></h2>
                         <p>If it is practically possible to do so, you should always maintain a log of user actions.
                             This log should, at least, record who did what, the assets used, and the time and date
                             of the action. As I discuss in Guideline 2, if you maintain this as a list of executable
@@ -308,8 +312,8 @@
                             change the log.</p>
                     </article>
 
-                    <article>
-                        <h2>Guideline 6: Use redundancy and diversity to reduce risk</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 6: Use redundancy and diversity to reduce risk</b></h2>
                         <p>Redundancy means that you maintain more than one version of software or data in a
                             system. Diversity, when applied to software, means that the different versions should
                             not rely on the same platform or be implemented using the same technologies.
@@ -326,8 +330,8 @@
                             </p>
                     </article>
 
-                    <article>
-                        <h2>Guideline 7: Validate all inputs</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 7: Validate all inputs</b></h2>
                         <P>A common attack on a system involves providing the system with unexpected inputs
                             that cause it to behave in an unanticipated way. These may simply cause a system
                             crash, resulting in a loss of service, or the inputs could be made up of malicious code
@@ -348,8 +352,8 @@
                             inputs, you avoid some of the problems of input validation.</p>
                     </article>
 
-                    <article>
-                        <h2>Guideline 8: Compartmentalize your assets</h2>
+                    <article class="articles">
+                        <h2 class="text-2xl"><b>Guideline 8: Compartmentalize your assets</b></h2>
                         <p>Compartmentalizing means that you should not provide all-or-nothing access to
                             information in a system. Rather, you should organize the information in a system
                             into compartments. Users should only have access to the information that they need,
@@ -370,8 +374,8 @@
                             unauthorized use.</p>
                         </article>
 
-                        <article>
-                            <h2>Guideline 9: Design for deployment</h2>
+                        <article class="articles">
+                            <h2 class="text-2xl"> <b>Guideline 9: Design for deployment</b></h2>
                             <p>Many security problems arise because the system is not configured correctly when it is
                                 deployed in its operational environment. You should therefore always design your
                                 system so that facilities are included to simplify deployment in the customer’s environment and to check for potential configuration errors and omissions in the deployed
@@ -379,8 +383,8 @@
                                 </p>
                         </article>
 
-                        <article>
-                            <h2>Guideline 10: Design for recoverability</h2>
+                        <article class="articles">
+                            <h2 class="text-2xl"><b>Guideline 10: Design for recoverability</b></h2>
                             <p>Irrespective of how much effort you put into maintaining systems security, you
                                 should always design your system with the assumption that a security failure could
                                 occur. Therefore, you should think about how to recover from possible failures and
@@ -401,8 +405,8 @@
                                         <p><b>Figure 14.7</b> Software deloyment</p>
                         </article>
 
-                        <article>
-                            <h3>14.2.3 Design for deployment</h3>
+                        <article id="fortri" class="articles">
+                            <h3  class="text-3xl mb-2"><b>14.2.3 Design for deployment</b></h3>
                         <p>________________________________________________________________________________________________</p>
 
                         <p>The deployment of a system involves configuring the software to operate in an operational environment, installing the system on the computers in that environment, and then
@@ -455,9 +459,20 @@
                                 </li>
                             </ol>
                         </article>
-
         </section>
     </main>
-        
+    
+    <footer class="bg-gray-900 p-5">
+    <section>
+        <p class="text-center text-gray-300">
+        © 
+        <a href="https://github.com/AxelBunsay/Security-Engineering.git">Bunsay</a>, 
+        <a href="https://github.com/CDTdavidhaboc">Haboc</a>, 
+        <a href="https://github.com/FireFlyDeveloper">Saludes</a>, 
+        <a href="https://github.com/Marriel223">Dastas</a>, 
+        <a href="">Jebulan</a>
+        </p>
+    </section>
+</footer>
 </body>
 </html>

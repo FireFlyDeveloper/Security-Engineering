@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+/* START OF DAVID HABOC - 14.2 */
+
+html{
+    @apply scroll-smooth ;
+}
+#DAVID{
+    @apply font-serif cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
+
+}
+#DAVID a:hover{
+    @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto]
+}
+#DAVID .head{
+    @apply bg-gray-900 text-white;
+}
+
+#DAVID #title{
+    @apply text-center text-4xl pt-3 pb-3;
+}
+
+#DAVID .list{
+    @apply bg-gray-800 p-4 pt-1 pb-1 ;
+}
+
+#DAVID .pindot {
+    @apply flex justify-center space-x-10 text-white lg:space-x-20;
+}
+
+#DAVID #main{
+    display: flex;
+}
+
+#DAVID .articles{
+    @apply mb-3 mt-2 mr-4 p-5 bg-gray-200 rounded-lg text-justify shadow-md;
+}
