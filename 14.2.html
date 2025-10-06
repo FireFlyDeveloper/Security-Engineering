@@ -13,6 +13,17 @@
     <header class="head" id="home">
 
         <h1 id="title">Design for Security </h1>
+        <h2 class="author flex items-center justify-center gap-2 w-full text-center">
+  Designed by:
+  <a href="https://www.facebook.com/davidhbc" title="David Haboc" 
+     class="flex items-center gap-2">
+    <img src="haboc.jpg" alt="David Emanuel A Haboc" 
+         class="hidden xl:block rounded-full w-7 h-7 object-cover">
+    <i>David Emanuel A Haboc</i>
+  </a>
+</h2>
+
+
 
         <nav class="list">
             <ul class="pindot">
@@ -26,18 +37,45 @@
         
     </header>
 
-    <main id="main">
-        <div class="sticky pr-10 top-8 left-3 h-max w-max ml-4 mt-2 mr-4 p-4 bg-gray-800 rounded-lg shadow-md">
-            <aside class="text-left flex flex-col text-[var(--light)] no-underline font-medium text-base transition-colors duration-300">
-                <p class=" italic mb-3 text-white ">Subtopics</p>
-                <ol class="flex flex-col space-y-3">
-                <a href="#home" class=" ml-4 pl-2 pr-40 text-white hover:text-gray-400 ">Home</a>
-                <a href="#forwan" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.1 Architectural design</a>
-                <a href="#fortu" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.2 Design Guidelines</a>
-                <a href="#fortri" class=" ml-4 pl-2 text-white hover:text-gray-400">14.2.3 Another Topic</a>
-                </ol>
-            </aside>
-        </div>
+   <main id="main" class="flex">
+    <nav class="responsiveNav">
+    <div class="text-left flex flex-col font-medium text-base transition-colors duration-300">
+        <p class="italic mb-3 text-gray-400">Subtopics</p>
+        <ol class="flex flex-col space-y-3 list-none">
+            <li>
+                <a href="#home"
+                    class="block ml-4 pl-2 pr-10 text-white hover:text-gray-400
+                           lg:pr-max xl:pr-25">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#forwan"
+                    class="sideText">
+                    <span class="hideflexNum">14.2.1</span>
+                    <span class="flexWords">14.2.1 Architectural design</span>
+                </a>
+            </li>
+            <li>
+                <a href="#fortu"
+                    class="sideText">
+                    <span class="hideflexNum">14.2.2</span>
+                    <span class="flexWords">14.2.2 Design Guidelines</span>
+                </a>
+            </li>
+            <li>
+                <a href="#fortri"
+                    class="sideText">
+                    <span class="hideflexNum">14.2.3</span>
+                    <span class="flexWords">14.2.3 Design for Deployment</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+</nav>
+
+
+
 
         <section>
             <article class="articles">
@@ -102,7 +140,6 @@
             </article>
             <article id="forwan" class="articles">
                         <h3  class="text-3xl mb-2"><b>14.2.1 Architectural design</b></h3>
-                        <p>________________________________________________________________________________________________</p>
             
                         <p>As I have discussed in Chapter 11, the choice of software architecture can have
                             profound effects on the emergent properties of a system. If an inappropriate
@@ -111,10 +148,10 @@
                         
                         <p>In designing a system architecture that maintains security, you need to consider
                             two fundamental issues:</p>
-                            <ol>
-                                <li>Protection—how should the system be organized so that critical assets can be
+                            <ol class="list-decimal list-inside pl-6 space-y-2">
+                                <li><b>Protection </b>—how should the system be organized so that critical assets can be
                                     protected against external attack?</li>
-                                <li> Distribution—how should system assets be distributed so that the effects of a
+                                <li> <b>Distribution </b>—how should system assets be distributed so that the effects of a
                                     successful attack are minimized?
                                 </li>
                             </ol>
@@ -138,13 +175,13 @@
                             system layers:
                             </p>
 
-                            <ol>
-                                <li><i>Platform-level protection</i> The top level controls access to the platform on which
+                            <ol class="list-decimal list-inside pl-6 space-y-2">
+                                <li><i><b>Platform-level protection </b></i> The top level controls access to the platform on which
                                     the patient record system runs. This usually involves a user signing on to a particular computer. The platform will also normally include support for maintaining the integrity of files on the system, backups, etc</li>
-                                <li><i>Application-level protection</i> The next protection level is built into the application itself. It involves a user accessing the application, being authenticated, and
+                                <li><i><b>Application-level protection</b></i> The next protection level is built into the application itself. It involves a user accessing the application, being authenticated, and
                                     getting authorization to take actions such as viewing or modifying data.
                                     Application-specific integrity management support may be available.</li>
-                                <li><i>Record-level protection</i> This level is invoked when access to specific records is
+                                <li><i><b>Record-level protection </b></i> This level is invoked when access to specific records is
                                     required, and involves checking that a user is authorized to carry out the
                                     requested operations on that record. Protection at this level might also involve
                                     encryption to ensure that records cannot be browsed using a file browser.
@@ -197,7 +234,6 @@
             <article id="fortu" class="articles">
 
                 <h3  class="text-3xl mb-2"><b>14.2.2 Design Guidelines</b></h3>
-                        <p>________________________________________________________________________________________________</p>
             
                 <p>There are no hard and fast rules about how to achieve system security. Different
                     types of systems require different technical measures to achieve a level of security
@@ -209,7 +245,7 @@
                     systems engineering. General design guidelines for security, such as those discussed,
                     below, have two principal uses:</p>
                     
-                    <ol>
+                    <ol class="list-decimal list-inside pl-6 space-y-2">
                         <li>They help raise awareness of security issues in a software engineering team.
                             Software engineers often focus on the short-term goal of getting the software
                             working and delivered to customers. It is easy for them to overlook security
@@ -384,7 +420,7 @@
                         </article>
 
                         <article class="articles">
-                            <h2 class="text-2xl"><b>Guideline 10: Design for recoverability</b></h2>
+                            <h2 class="text-2xl"><b> Guideline 10: Design for recoverability</b></h2>
                             <p>Irrespective of how much effort you put into maintaining systems security, you
                                 should always design your system with the assumption that a security failure could
                                 occur. Therefore, you should think about how to recover from possible failures and
@@ -407,7 +443,6 @@
 
                         <article id="fortri" class="articles">
                             <h3  class="text-3xl mb-2"><b>14.2.3 Design for deployment</b></h3>
-                        <p>________________________________________________________________________________________________</p>
 
                         <p>The deployment of a system involves configuring the software to operate in an operational environment, installing the system on the computers in that environment, and then
                             configuring the installed system for these computers (Figure 14.7). Configuration may
@@ -428,8 +463,8 @@
                             responsibility to ‘design for deployment’. You should always provide built-in support for deployment that will reduce the probability that system administrators (or
                             users) will make mistakes when configuring the software.</p>
                             <p>I recommend four ways to incorporate deployment support in a system:</p>
-                            <ol>
-                                <li><i>Include support for viewing and analyzing configurations</i> You should always
+                            <ol class="list-decimal list-inside pl-6 space-y-2" >
+                                <li><i><b>Include support for viewing and analyzing configurations </b></i> You should always
                                     include facilities in a system that allow administrators or permitted users to examine the current configuration of the system. This facility is, surprisingly, lacking
                                     from most software systems and users are frustrated by the difficulties of finding
                                     configuration settings. For example, in the version of the word processor that
@@ -437,20 +472,20 @@
                                     picture of a configuration, they are more likely to spot errors and omissions.
                                     Ideally, a configuration display should also highlight aspects of the configuration
                                     that are potentially unsafe—for example, if a password has not been set up</li>
-                                <li><i>Minimize default privileges</i> You should design software so that the default configuration of a system provides minimum essential privileges. This way, the
+                                <li><i><b>Minimize default privileges</b></i> You should design software so that the default configuration of a system provides minimum essential privileges. This way, the
                                     damage that any attacker can do can be limited. For example, the default system
                                     administrator authentication should only allow access to a program that enables
                                     an administrator to set up new credentials. It should not allow access to any
                                     other system facilities. Once the new credentials have been set up, the default
                                     login and password should be deleted automatically.</li>
-                                <li><i>Localize configuration</i> settings When designing system configuration support,
+                                <li><i><b>Localize configuration</b></i> settings When designing system configuration support,
                                     you should ensure that everything in a configuration that affects the same part of
                                     a system is set up in the same place. To use the word processor example again,
                                     in the version that I use, I can set up some security information, such as a password to control access to the document, using the Preferences/Security menu.
                                     Other information is set up in the Tools/Protect Document menu. If configuration information is not localized, it is easy to forget to set it up or, in some cases,
                                     not even be aware that some security facilities are included in the system.
                                 </li>
-                                <li><i>Provide easy ways to fix security vulnerabilities</i> You should include straightforward mechanisms for updating the system to repair security vulnerabilities that
+                                <li><i><b>Provide easy ways to fix security vulnerabilities</b></i> You should include straightforward mechanisms for updating the system to repair security vulnerabilities that
                                     have been discovered. These could include automatic checking for security
                                     updates, or downloading of these updates as soon as they are available. It is
                                     important that users cannot bypass these mechanisms as, inevitably, they will
@@ -470,7 +505,7 @@
         <a href="https://github.com/CDTdavidhaboc">Haboc</a>, 
         <a href="https://github.com/FireFlyDeveloper">Saludes</a>, 
         <a href="https://github.com/Marriel223">Dastas</a>, 
-        <a href="">Jebulan</a>
+        <a href="https://github.com/johnmarkjebulan">Jebulan</a>
         </p>
     </section>
 </footer>

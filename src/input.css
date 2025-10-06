@@ -1,37 +1,77 @@
-@import "tailwindcss";
+@import "tailwindcss"; 
 
 /* START OF DAVID HABOC - 14.2 */
 
-html{
-    @apply scroll-smooth ;
-}
-#DAVID{
-    @apply font-serif cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
-
-}
-#DAVID a:hover{
-    @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto]
-}
-#DAVID .head{
-    @apply bg-gray-900 text-white;
+/* Base styles (mobile first) */
+html {
+  @apply scroll-smooth;
 }
 
-#DAVID #title{
-    @apply text-center text-4xl pt-3 pb-3;
+#DAVID {
+  @apply font-serif cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
+  
 }
 
-#DAVID .list{
-    @apply bg-gray-800 p-4 pt-1 pb-1 ;
+#DAVID a:hover {
+  @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
+}
+
+#DAVID .head {
+  @apply bg-gray-900 text-white;
+}
+
+#DAVID #title {
+  @apply text-center text-3xl pt-3 pb-3
+    sm:text-4xl
+    md:text-5xl
+    lg:text-6xl
+    xl:text-7xl;
+}
+
+#DAVID .author {
+  @apply text-center mb-3 text-gray-400 sm:text-base md:text-lg;
+}
+
+#DAVID .list {
+  @apply bg-gray-800 p-4 pt-1 pb-1;
 }
 
 #DAVID .pindot {
-    @apply flex justify-center space-x-10 text-white lg:space-x-20;
+  @apply flex justify-center space-x-6 text-white text-sm
+    sm:space-x-10 sm:text-base
+    md:space-x-14 md:text-lg
+    lg:space-x-20 lg:text-xl
+    xl:space-x-24 xl:text-xl;
 }
 
-#DAVID #main{
-    display: flex;
+#DAVID #main {
+  @apply flex flex-col
+    sm:flex-row
+    md:flex-row
+    lg:flex-row
+    xl:flex-row;
 }
 
-#DAVID .articles{
-    @apply mb-3 mt-2 mr-4 p-5 bg-gray-200 rounded-lg text-justify shadow-md;
+#DAVID .responsiveNav {
+  @apply hidden lg:block sticky top-8 left-0 h-max w-full max-w-xs ml-4 mt-2 mr-4 p-4 bg-gray-800 rounded-lg shadow-md;
+}
+
+#DAVID .hideflexNum {
+  @apply hidden lg:inline xl:hidden;
+}
+
+#DAVID .flexWords {
+  @apply hidden xl:inline;
+}
+
+#DAVID .sideText {
+  @apply block ml-4 pl-2 text-white hover:text-gray-400;
+}
+
+#DAVID .articles {
+  @apply mt-2 p-3 bg-gray-200 rounded-lg text-justify shadow-md text-sm mb-6 w-full max-w-full
+    sm:text-base sm:mb-8 sm:p-4 sm:max-w-2xl
+    md:text-lg md:mb-10 md:p-6 md:max-w-5xl
+    lg:text-xl lg:mb-6 lg:p-8 lg:max-w-6xl
+    xl:text-xl xl:mb-4 xl:p-10 xl:max-w-6xl;
 }
