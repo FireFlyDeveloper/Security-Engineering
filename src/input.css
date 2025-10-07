@@ -274,3 +274,70 @@ html {
   }
 }
 
+#kim_eduard body {
+  @apply font-poppins m-0 p-0;
+}
+
+#kim_eduard header {
+  @apply bg-gray-900 text-white p-4 text-center;
+}
+
+#kim_eduard nav {
+  @apply bg-[#444] p-2;
+}
+
+#kim_eduard nav ul {
+  @apply list-none p-0 m-0 flex justify-center;
+}
+
+#kim_eduard nav li {
+  @apply mx-4;
+}
+
+#kim_eduard nav a {
+  @apply text-white no-underline;
+}
+
+#kim_eduard main {
+  @apply p-8;
+}
+
+#kim_eduard section {
+  @apply mb-8;
+}
+
+#kim_eduard footer {
+  @apply bg-[#333] text-white text-center p-4;
+}
+
+#kim_eduard img {
+  @apply border rounded-lg shadow-md m-10;
+}
+
+#kim_eduard ol img {
+  @apply mx-auto;
+}
+
+#kim_eduard main {
+  @apply sm:pl-5 sm:pr-5 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 xl:pl-40 xl:pr-40;
+}
+
+#kim_eduard p {
+  @apply mb-2 text-justify tracking-wide text-xl;
+}
+
+#kim_eduard h3 {
+  @apply font-bold;
+}
+
+#kim_eduard section {
+  @apply mb-6 p-6 bg-gray-200 rounded-lg shadow-md;
+}
+
+#kim_eduard main ul {
+  @apply list-disc ml-10;
+}
+
+#kim_eduard main ol {
+  @apply ml-10;
+}
