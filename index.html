@@ -4,86 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Engineering Homepage</title>
-    <style>
-body {
-  font-family: 'Times New Roman', serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F3F4F6; /* light gray background */
-  color: #1E293B; /* dark text for readability */
-}
-
-header {
-  background-color: #36BFFA; /* light blue */
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  font-size: 2rem;
-}
-
-nav {
-  background-color: #1E3A8A; /* dark blue for contrast */
-  padding: 0.85rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 1.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #36BFFA; /* hover accent */
-}
-
-main {
-  padding: 2rem;
-  background-color: white; /* contrast section from light gray body */
-  margin: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #1E3A8A; /* dark blue headings */
-  border-bottom: 2px solid #36BFFA;
-  padding-bottom: 0.5rem;
-  text-align: center; /* center title */
-}
-
-.author {
-  color: #1E3A8A; /* same as heading */
-  text-align: center; /* center align */
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-footer {
-  background-color: #84CAFF; /* lighter blue */
-  color: #1E293B;
-  text-align: center;
-  padding: 1rem;
-}
-    </style>
+    <!-- Tailwind CSS CDN for utility classes (for features only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
+<body id="xenxide">
     <header>
         <h1>Security Engineering</h1>
     </header>
@@ -130,6 +55,8 @@ be neutralized.</p>
 not about computer security as a whole and so doesn’t cover topics such as encryption, access control, authorization mechanisms, viruses and Trojan horses, etc. These
 are described in detail in general texts on computer security (Anderson, 2008;
 Bishop, 2005; Pfleeger and Pfleeger, 2007).</p>
+                <img src="14.1.png" class="animated-section">
+
                 <p>The majority of external attacks focus on system infrastructures because infrastructure components (e.g., web browsers) are well known and widely available.
 Attackers can probe these systems for weaknesses and share information about vulnerabilities that they have discovered. As many people use the same software,
 attacks have wide applicability. Infrastructure vulnerabilities may lead to attackers
@@ -172,7 +99,11 @@ of the system design process.</p>
         
     </main>
     <footer>
-        <p>&copy; <a href="https://github.com/FireFlyDeveloper">Saludes, </a> <a href="https://github.com/CDTdavidhaboc">Haboc, </a> <a href="https://github.com/AxelBunsay">Bunsay, </a> <a href="https://github.com/Marriel223">Dastas</a></p>
+        <p class="footerP">&copy; <a href="https://github.com/FireFlyDeveloper">Saludes, </a> 
+          <a href="https://github.com/CDTdavidhaboc">Haboc, </a> 
+          <a href="https://github.com/AxelBunsay">Bunsay, </a> 
+          <a href="https://github.com/Marriel223">Dastas</a>
+        </p>
     </footer>
 </body>
 </html>

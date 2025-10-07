@@ -4,88 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Risk Management</title>
-    <style>
-body {
-  font-family: 'Times New Roman', serif;
-  margin: 0;
-  padding: 0;
-  background-color: #F3F4F6; /* light gray background */
-  color: #1E293B; /* dark text for readability */
-}
-
-header {
-  background-color: #36BFFA; /* light blue */
-  color: white;
-  padding: 2rem;
-  text-align: center;
-  font-size: 2rem;
-}
-
-nav {
-  background-color: #1E3A8A; /* dark blue for contrast */
-  padding: 0.85rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-}
-
-nav li {
-  margin: 0 1.5rem;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: #36BFFA; /* hover accent */
-}
-
-main {
-  padding: 2rem;
-  background-color: white; /* contrast section from light gray body */
-  margin: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-h2 {
-  color: #1E3A8A; /* dark blue headings */
-  border-bottom: 2px solid #36BFFA;
-  padding-bottom: 0.5rem;
-  text-align: center; /* center title */
-}
-
-.author {
-  color: #1E3A8A; /* same as heading */
-  text-align: center; /* center align */
-  font-style: italic;
-  margin-top: 0.5rem;
-}
-
-footer {
-  background-color: #84CAFF; /* lighter blue */
-  color: #1E293B;
-  text-align: center;
-  padding: 1rem;
-}
-    </style>
+      <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
+<body id="xenxide1">
     <header>
-        <h1>Security Risk Management</h1>
+        <h1>Security Engineering</h1>
     </header>
     <nav>
         <ul>
@@ -97,7 +20,7 @@ footer {
     </nav>
    <main>
         <section id="SecurityRiskManagement">
-            <h2>Welcome to Security Engineering</h2>
+            <h2>Security Risk Management</h2>
             <p class="author">Written by: Axel Stephan Bunsay</p>
             <p>Security risk assessment and management is essential for effective security engineering. Risk management is concerned with assessing the possible losses that might
 ensue from attacks on assets in the system, and balancing these losses against the costs of security procedures that may reduce these losses. Credit card companies do
@@ -127,6 +50,8 @@ been made. The aim of this assessment process is to decide if an adequate level
 of security can be achieved at a reasonable cost. If this is the case, you can then
 derive specific security requirements for the system. You do not have information about potential vulnerabilities in the system or the controls that are included
 in reused system components or middleware.</li>
+
+                  
                     <li>Life-cycle risk assessment This risk assessment takes place during the system
 development life cycle and is informed by the technical system design and
 implementation decisions. The results of the assessment may lead to changes to
@@ -167,6 +92,8 @@ system that transfer money to the perpetrator’s bank account.</li>
             <p>Misuse cases are not just useful in preliminary risk assessment but may be used
 for security analysis in life-cycle risk analysis and operational risk analysis. They
 provide a useful basis for playing out hypothetical attacks on the system and assessing the security implications of design decisions that have been made.</p>
+            
+            <img src="14.2.png" alt="">
             <p>Based on organizational security policies, preliminary risk assessment should identify the most important security requirements for a system. These reflect how the
 security policy should be implemented in that application, identify the assets to be
 protected, and decide what approach should be used to provide that protection.
@@ -214,29 +141,66 @@ because it appears to offer the most extensive functionality for the lowest deve
             <p>When you develop an application by reusing an existing system, you have to
 accept the design decisions made by the developers of that system. Let us assume
 that some of these design decisions are as follows:</p>
-                <ol>
-                    <li>System users are authenticated using a login name/password combination. No
-other authentication method is supported.</li>
-                    <li>The system architecture is client-server, with clients accessing data through a
-standard web browser on a client PC.</li>
-                    <li>Information is presented to users as an editable web form. They can change
-information in place and upload the revised information to the server.</li>
-                </ol>
+            <table class="feature-table w-full border-collapse my-4">
+    <thead>
+      <tr>
+        <th class="w-8 border border-gray-400 bg-gray-400 text-white text-center font-poppins px-4 py-3">
+          #
+        </th>
+        <th class="border border-gray-400 bg-gray-400 text-white text-left font-poppins px-4 py-3">
+          Design Decision
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">1.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          System users are authenticated using a login name/password combination. No other authentication method is supported.
+        </td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">2.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          The system architecture is client-server, with clients accessing data through a standard web browser on a client PC.
+        </td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">3.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          Information is presented to users as an editable web form. They can change information in place and upload the revised information to the server.
+        </td>
+      </tr>
+    </tbody>
+  </table>
             <p>For a generic system, these design decisions are perfectly acceptable, but a lifecycle risk analysis reveals that they have associated vulnerabilities. Once vulnerabilities have been identified, you then have to make a decision on
 what steps that you can take to reduce the associated risks. This will often involve
 making decisions about additional system security requirements or the operational
 process of using the system. I don’t have space here to discuss all the requirements
 that might be proposed to address the inherent vulnerabilities, but some examples of
 requirements might be the following:</p>
-                <ol>
-                    <li>A password checker program shall be made available and shall be run daily.
-User passwords that appear in the system dictionary shall be identified and users
-with weak passwords reported to system administrators.</li>
-                    <li>Access to the system shall only be allowed to client computers that have been
-approved and registered with the system administrators.</li>
-                    <li>All client computers shall have a single web browser installed as approved by
-system administrators.</li>
-                </ol>
+            <table class="feature-table w-full border-collapse my-4">
+                <thead>
+                    <tr>
+                        <th class="w-8 border border-gray-400 bg-gray-400 text-white text-center font-poppins px-4 py-3">#</th>
+                        <th class="border border-gray-400 bg-gray-400 text-white text-left font-poppins px-4 py-3">Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">1.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">A password checker program shall be made available and shall be run daily. User passwords that appear in the system dictionary shall be identified and users with weak passwords reported to system administrators.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">2.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">Access to the system shall only be allowed to client computers that have been approved and registered with the system administrators.</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">3.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">All client computers shall have a single web browser installed as approved by system administrators.</td>
+                    </tr>
+                </tbody>
+            </table>
             <p>As an off-the-shelf system is used, it isn’t possible to include a password checker in
 the application system itself, so a separate system must be used. Password checkers analyze the strength of user passwords when they are set up, and notify users if they have
 chosen weak passwords. Therefore, vulnerable passwords can be identified reasonably quickly after they have been set up, and action can then be taken to ensure that users
