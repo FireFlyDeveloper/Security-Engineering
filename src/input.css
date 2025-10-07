@@ -1,3 +1,4 @@
+
 @import "tailwindcss"; 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -91,3 +92,186 @@ html {
     lg:text-xl lg:mb-6 lg:p-8 lg:max-w-6xl
     xl:text-xl xl:mb-4 xl:p-10 xl:max-w-6xl;
 }
+@theme{
+    --font-poppins: 'Poppins', sans-serif;
+}
+#xenxide body {
+    @apply m-0 p-0 text-slate-800;
+  }
+
+  #xenxide header {
+    @apply font-poppins bg-gray-900 text-white p-8 text-center text-2xl;
+  }
+
+  #xenxide nav {
+    @apply font-poppins bg-gray-800 p-[0.85rem];
+  }
+
+  #xenxide nav ul {
+    @apply font-poppins list-none p-0 m-0 flex justify-center;
+  }
+
+  #xenxide nav li {
+    @apply font-poppins mx-6 ;
+  }
+
+  #xenxide nav a {
+  @apply font-poppins text-xs sm:text-base md:text-lg lg:text-lg text-white no-underline font-bold transition-colors duration-300;
+}
+
+
+#xenxide nav a:hover {
+    @apply font-poppins text-gray-400;
+  }
+
+  #xenxide main {
+    @apply font-poppins p-8 leading-loose text-justify bg-gray-200 m-6 rounded-[10px] shadow-md;
+  }
+
+  #xenxide section {
+    @apply font-poppins mb-8;
+  }
+
+  #xenxide h2 {
+    @apply font-poppins text-gray-900 border-b-2 border-gray-900 pb-2 text-center;
+  }
+
+  #xenxide .author {
+    @apply font-poppins text-gray-900 text-center italic mt-2;
+  }
+
+  #xenxide footer {
+    @apply font-poppins bg-gray-900 text-slate-200 text-center p-4;
+  }
+
+
+#xenxide components {
+  /* Table styling */
+  .feature-table {
+    @apply font-poppins w-full border-collapse mt-6 mb-6 bg-gray-100 rounded-lg overflow-hidden shadow-sm transition-shadow duration-300;
+  }
+
+  #xenxide .feature-table th,
+  .feature-table td {
+    @apply font-poppins border border-[#36BFFA] px-4 py-3 text-left;
+  }
+
+  #xenxide .feature-table th {
+    @apply font-poppins bg-[#36BFFA] text-white;
+  }
+
+  #xenxide .feature-table tr:hover {
+    @apply font-poppins bg-sky-100 transition-colors duration-300;
+  }
+
+  /* Animated section */
+  #xenxide .animated-section {
+    @apply transition-shadow md:transition-transform duration-400;
+  }
+  #xenxide .animated-section:hover {
+    @apply shadow-lg scale-[1.015];
+  }
+
+  /* Filtered image */
+  #xenxide .filtered-img {
+    @apply w-[220px] h-[120px] object-cover rounded-lg mx-auto my-2 block shadow-md;
+    filter: grayscale(80%) blur(1px) brightness(0.95);
+    transition: filter 0.5s, transform 0.5s;
+  }
+  #xenxide .filtered-img:hover {
+    filter: grayscale(0%) blur(0) brightness(1.05);
+    transform: scale(1.04);
+  }
+}
+
+
+
+#xenxide1 body {
+    @apply m-0 p-0 text-slate-800;
+  }
+
+  #xenxide1 header {
+    @apply font-poppins bg-gray-900 text-white p-8 text-center text-2xl;
+  }
+
+  #xenxide1 nav {
+    @apply font-poppins bg-gray-800 p-[0.85rem];
+  }
+
+  #xenxide1 nav ul {
+    @apply font-poppins list-none p-0 m-0 flex justify-center;
+  }
+
+  #xenxide1 nav li {
+    @apply font-poppins mx-6;
+  }
+
+   #xenxide1 nav a {
+  @apply font-poppins text-sm sm:text-base md:text-lg lg:text-lg text-white no-underline font-bold transition-colors duration-300;
+}
+
+#xenxide1 nav a:hover {
+    @apply font-poppins text-gray-400;
+  }
+
+  #xenxide1 main {
+    @apply font-poppins p-8 leading-loose text-justify bg-gray-200 m-6 rounded-[10px] shadow-md;
+  }
+
+  #xenxide1 section {
+    @apply font-poppins mb-8;
+  }
+
+  #xenxide1 h2 {
+    @apply font-poppins text-gray-900 border-b-2 border-gray-900 pb-2 text-center;
+  }
+
+  #xenxide1 .author {
+    @apply font-poppins text-gray-900 text-center italic mt-2;
+  }
+
+  #xenxide1 footer {
+    @apply font-poppins bg-gray-900 text-slate-200 text-center p-4;
+  }
+
+
+#xenxide1 components {
+  /* Table styling */
+  .feature-table {
+    @apply font-poppins w-full border-collapse mt-6 mb-6 bg-gray-100 rounded-lg overflow-hidden shadow-sm transition-shadow duration-300;
+  }
+
+#xenxide1 .feature-table th,
+.feature-table td {
+  @apply font-poppins border border-gray-500 px-4 py-3 text-left;
+}
+
+#xenxide1 .feature-table th {
+  @apply font-poppins bg-gray-500 text-white;
+}
+
+
+  #xenxide1 .feature-table tr:hover {
+    @apply font-poppins bg-sky-100 transition-colors duration-300;
+  }
+
+  /* Animated section */
+  #xenxide1 .animated-section {
+    @apply transition-shadow md:transition-transform duration-400;
+  }
+  #xenxide1 .animated-section:hover {
+    @apply shadow-lg scale-[1.015];
+  }
+
+  /* Filtered image */
+  #xenxide1 .filtered-img {
+    @apply w-[220px] h-[120px] object-cover rounded-lg mx-auto my-2 block shadow-md;
+    filter: grayscale(80%) blur(1px) brightness(0.95);
+    transition: filter 0.5s, transform 0.5s;
+  }
+  #xenxide1 .filtered-img:hover {
+    filter: grayscale(0%) blur(0) brightness(1.05);
+    transform: scale(1.04);
+  }
+}
+
