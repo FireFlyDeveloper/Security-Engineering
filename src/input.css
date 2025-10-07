@@ -1,6 +1,97 @@
-@import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import "tailwindcss"; 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  --font-poppins: "Poppins", sans-serif;  
+  font-family: var(--font-poppins);       
+  @apply scroll-smooth;
+}
+
+
+#DAVID {
+  @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
+  
+}
+
+#DAVID a:hover {
+  @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
+}
+
+#DAVID .head {
+  @apply bg-gray-900 text-white;
+}
+
+#DAVID #title {
+  @apply  text-center text-3xl pt-3 pb-3
+    sm:text-4xl
+    md:text-5xl
+    lg:text-6xl
+    xl:text-7xl;
+}
+
+#DAVID .author {
+  @apply text-left text-gray-200 sm:text-base md:text-lg flex items-center justify-start gap-2 w-full;
+}
+
+
+#DAVID .list {
+  @apply bg-gray-800 p-4 pt-1 pb-1;
+}
+
+#DAVID .pindot {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center text-center text-sm sm:text-base md:text-lg lg:text-lg ;
+}
+
+#DAVID .column{
+  @apply col-span-1 text-white hover:underline;
+}
+
+#DAVID #main {
+  @apply flex flex-col
+    sm:flex-row
+    md:flex-row
+    lg:flex-row
+    xl:flex-row;
+}
+
+#DAVID .navigation {
+  @apply grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4
+         w-max sm:max-w-sm md:max-w-md lg:max-w-xs 
+         mr-5 sticky top-8 self-start h-max 
+         transition-all duration-300 ease-in-out;
+}
+
+#DAVID .responsiveNav {
+  @apply hidden md:block lg:block sticky col-span-1 left-0 h-max w-full max-w-xs ml-4 mt-2 mr-4 p-4 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
+}
+
+#DAVID .divNav{
+  @apply text-left flex flex-col font-medium text-base transition-colors duration-300;
+}
+#DAVID .responsiveAuth {
+  @apply hidden md:block lg:block sticky top-auto col-end-1 left-0 w-full max-w-xs p-4 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg ml-4;
+}
+
+#DAVID .hideflexNum {
+  @apply hidden md:inline lg:inline xl:hidden;
+}
+
+#DAVID .flexWords {
+  @apply hidden xl:inline;
+}
+
+#DAVID .sideText {
+  @apply block ml-4 pl-2 text-white hover:text-gray-400;
+}
+
+#DAVID .articles {
+  @apply mt-2 p-3 bg-gray-200  leading-loose rounded-lg text-justify shadow-md text-sm mb-6 w-full max-w-full
+    sm:text-base sm:mb-8 sm:p-4 sm:max-w-2xl
+    md:text-lg md:mb-10 md:p-6 md:max-w-5xl
+    lg:text-xl lg:mb-6 lg:p-8 lg:max-w-6xl
+    xl:text-xl xl:mb-4 xl:p-10 xl:max-w-6xl;
+}
 @theme{
     --font-poppins: 'Poppins', sans-serif;
 }
@@ -183,3 +274,4 @@
     transform: scale(1.04);
   }
 }
+
