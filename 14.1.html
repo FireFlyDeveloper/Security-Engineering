@@ -141,53 +141,63 @@ because it appears to offer the most extensive functionality for the lowest deve
             <p>When you develop an application by reusing an existing system, you have to
 accept the design decisions made by the developers of that system. Let us assume
 that some of these design decisions are as follows:</p>
-            <table style="width:100%; border-collapse:collapse; margin: 1rem 0;">
-                <thead>
-                    <tr>
-                        <th style="width:2rem; border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:center;">#</th>
-                        <th style="border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:left;">Design Decision</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">1.</td>
-                        <td style="border:1px solid #36BFFA;">System users are authenticated using a login name/password combination. No other authentication method is supported.</td>
-                    </tr>
-                    <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">2.</td>
-                        <td style="border:1px solid #36BFFA;">The system architecture is client-server, with clients accessing data through a standard web browser on a client PC.</td>
-                    </tr>
-                    <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">3.</td>
-                        <td style="border:1px solid #36BFFA;">Information is presented to users as an editable web form. They can change information in place and upload the revised information to the server.</td>
-                    </tr>
-                </tbody>
-            </table>
+            <table class="feature-table w-full border-collapse my-4">
+    <thead>
+      <tr>
+        <th class="w-8 border border-gray-400 bg-gray-400 text-white text-center font-poppins px-4 py-3">
+          #
+        </th>
+        <th class="border border-gray-400 bg-gray-400 text-white text-left font-poppins px-4 py-3">
+          Design Decision
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">1.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          System users are authenticated using a login name/password combination. No other authentication method is supported.
+        </td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">2.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          The system architecture is client-server, with clients accessing data through a standard web browser on a client PC.
+        </td>
+      </tr>
+      <tr>
+        <td class="border border-gray-400 text-center font-poppins px-4 py-3">3.</td>
+        <td class="border border-gray-400 font-poppins px-4 py-3">
+          Information is presented to users as an editable web form. They can change information in place and upload the revised information to the server.
+        </td>
+      </tr>
+    </tbody>
+  </table>
             <p>For a generic system, these design decisions are perfectly acceptable, but a lifecycle risk analysis reveals that they have associated vulnerabilities. Once vulnerabilities have been identified, you then have to make a decision on
 what steps that you can take to reduce the associated risks. This will often involve
 making decisions about additional system security requirements or the operational
 process of using the system. I don’t have space here to discuss all the requirements
 that might be proposed to address the inherent vulnerabilities, but some examples of
 requirements might be the following:</p>
-            <table style="width:100%; border-collapse:collapse; margin: 1rem 0;">
+            <table class="feature-table w-full border-collapse my-4">
                 <thead>
                     <tr>
-                        <th style="width:2rem; border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:center;">#</th>
-                        <th style="border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:left;">Requirement</th>
+                        <th class="w-8 border border-gray-400 bg-gray-400 text-white text-center font-poppins px-4 py-3">#</th>
+                        <th class="border border-gray-400 bg-gray-400 text-white text-left font-poppins px-4 py-3">Requirement</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">1.</td>
-                        <td style="border:1px solid #36BFFA;">A password checker program shall be made available and shall be run daily. User passwords that appear in the system dictionary shall be identified and users with weak passwords reported to system administrators.</td>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">1.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">A password checker program shall be made available and shall be run daily. User passwords that appear in the system dictionary shall be identified and users with weak passwords reported to system administrators.</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">2.</td>
-                        <td style="border:1px solid #36BFFA;">Access to the system shall only be allowed to client computers that have been approved and registered with the system administrators.</td>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">2.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">Access to the system shall only be allowed to client computers that have been approved and registered with the system administrators.</td>
                     </tr>
                     <tr>
-                        <td style="border:1px solid #36BFFA; text-align:center;">3.</td>
-                        <td style="border:1px solid #36BFFA;">All client computers shall have a single web browser installed as approved by system administrators.</td>
+                        <td class="border border-gray-400 text-center font-poppins px-4 py-3">3.</td>
+                        <td class="border border-gray-400 font-poppins px-4 py-3">All client computers shall have a single web browser installed as approved by system administrators.</td>
                     </tr>
                 </tbody>
             </table>

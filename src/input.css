@@ -9,11 +9,11 @@
   }
 
   #xenxide header {
-    @apply font-poppins bg-[#36BFFA] text-white p-8 text-center text-2xl;
+    @apply font-poppins bg-gray-900 text-white p-8 text-center text-2xl;
   }
 
   #xenxide nav {
-    @apply font-poppins bg-blue-900 p-[0.85rem];
+    @apply font-poppins bg-gray-800 p-[0.85rem];
   }
 
   #xenxide nav ul {
@@ -21,19 +21,20 @@
   }
 
   #xenxide nav li {
-    @apply font-poppins mx-6;
+    @apply font-poppins mx-6 ;
   }
 
   #xenxide nav a {
-    @apply font-poppins text-white no-underline font-bold transition-colors duration-300;
-  }
+  @apply font-poppins text-xs sm:text-base md:text-lg lg:text-lg text-white no-underline font-bold transition-colors duration-300;
+}
+
 
 #xenxide nav a:hover {
-    @apply font-poppins text-[#36BFFA];
+    @apply font-poppins text-gray-400;
   }
 
   #xenxide main {
-    @apply font-poppins p-8 bg-white m-6 rounded-[10px] shadow-md;
+    @apply font-poppins p-8 leading-loose text-justify bg-gray-200 m-6 rounded-[10px] shadow-md;
   }
 
   #xenxide section {
@@ -41,16 +42,17 @@
   }
 
   #xenxide h2 {
-    @apply font-poppins text-blue-900 border-b-2 border-[#36BFFA] pb-2 text-center;
+    @apply font-poppins text-gray-900 border-b-2 border-gray-900 pb-2 text-center;
   }
 
   #xenxide .author {
-    @apply font-poppins text-blue-900 text-center italic mt-2;
+    @apply font-poppins text-gray-900 text-center italic mt-2;
   }
 
   #xenxide footer {
-    @apply font-poppins bg-[#84CAFF] text-slate-800 text-center p-4;
+    @apply font-poppins bg-gray-900 text-slate-200 text-center p-4;
   }
+
 
 #xenxide components {
   /* Table styling */
@@ -91,16 +93,18 @@
   }
 }
 
+
+
 #xenxide1 body {
-    @apply font-poppins m-0 p-0 text-slate-800;
+    @apply m-0 p-0 text-slate-800;
   }
 
   #xenxide1 header {
-    @apply font-poppins font-bold bg-[#36BFFA] text-white p-8 text-center text-2xl;
+    @apply font-poppins bg-gray-900 text-white p-8 text-center text-2xl;
   }
 
   #xenxide1 nav {
-    @apply bg-blue-900 p-[0.85rem];
+    @apply font-poppins bg-gray-800 p-[0.85rem];
   }
 
   #xenxide1 nav ul {
@@ -108,51 +112,53 @@
   }
 
   #xenxide1 nav li {
-    @apply mx-6;
+    @apply font-poppins mx-6;
   }
 
-  #xenxide1 nav a {
-    @apply font-poppins text-white no-underline font-bold transition-colors duration-300;
-  }
+   #xenxide1 nav a {
+  @apply font-poppins text-sm sm:text-base md:text-lg lg:text-lg text-white no-underline font-bold transition-colors duration-300;
+}
 
 #xenxide1 nav a:hover {
-    @apply font-poppins text-[#36BFFA];
+    @apply font-poppins text-gray-400;
   }
 
   #xenxide1 main {
-    @apply p-8 bg-white m-6 rounded-[10px] shadow-md;
+    @apply font-poppins p-8 leading-loose text-justify bg-gray-200 m-6 rounded-[10px] shadow-md;
   }
 
   #xenxide1 section {
-    @apply mb-8;
+    @apply font-poppins mb-8;
   }
 
   #xenxide1 h2 {
-    @apply font-poppins  text-blue-900 border-b-2 border-[#36BFFA] pb-2 text-center;
+    @apply font-poppins text-gray-900 border-b-2 border-gray-900 pb-2 text-center;
   }
 
   #xenxide1 .author {
-    @apply font-poppins text-blue-900 text-center italic mt-2;
+    @apply font-poppins text-gray-900 text-center italic mt-2;
   }
 
   #xenxide1 footer {
-    @apply font-poppins bg-[#84CAFF] text-slate-800 text-center p-4;
+    @apply font-poppins bg-gray-900 text-slate-200 text-center p-4;
   }
+
 
 #xenxide1 components {
   /* Table styling */
   .feature-table {
-    @apply w-full border-collapse mt-6 mb-6 bg-gray-100 rounded-lg overflow-hidden shadow-sm transition-shadow duration-300;
+    @apply font-poppins w-full border-collapse mt-6 mb-6 bg-gray-100 rounded-lg overflow-hidden shadow-sm transition-shadow duration-300;
   }
 
-  #xenxide1 .feature-table th,
-  .feature-table td {
-    @apply font-poppins border border-[#36BFFA] px-4 py-3 text-left;
-  }
+#xenxide1 .feature-table th,
+.feature-table td {
+  @apply font-poppins border border-gray-500 px-4 py-3 text-left;
+}
 
-  #xenxide1 .feature-table th {
-    @apply font-poppins bg-[#36BFFA] text-white;
-  }
+#xenxide1 .feature-table th {
+  @apply font-poppins bg-gray-500 text-white;
+}
+
 
   #xenxide1 .feature-table tr:hover {
     @apply font-poppins bg-sky-100 transition-colors duration-300;
