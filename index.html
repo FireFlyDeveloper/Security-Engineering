@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Security Engineering Homepage</title>
+    <!-- Tailwind CSS CDN for utility classes (for features only) -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
 body {
   font-family: 'Times New Roman', serif;
@@ -81,6 +83,65 @@ footer {
   text-align: center;
   padding: 1rem;
 }
+
+/* Responsive grid for table */
+@media (max-width: 600px) {
+  .feature-table {
+    font-size: 0.95rem;
+  }
+}
+
+/* Table styling */
+.feature-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: #F3F4F6;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(30,41,59,0.07);
+  transition: box-shadow 0.3s;
+}
+.feature-table th, .feature-table td {
+  border: 1px solid #36BFFA;
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+.feature-table th {
+  background: #36BFFA;
+  color: #fff;
+}
+.feature-table tr:hover {
+  background: #E0F2FE;
+  transition: background 0.3s;
+}
+
+/* Animation for section */
+.animated-section {
+  transition: box-shadow 0.4s, transform 0.4s;
+}
+.animated-section:hover {
+  box-shadow: 0 4px 16px rgba(30,41,59,0.18);
+  transform: scale(1.015);
+}
+
+/* Filtered image */
+.filtered-img {
+  width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: grayscale(80%) blur(1px) brightness(0.95);
+  transition: filter 0.5s, transform 0.5s;
+  margin: 0.5rem auto 0.5rem auto;
+  display: block;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.12);
+}
+.filtered-img:hover {
+  filter: grayscale(0%) blur(0) brightness(1.05);
+  transform: scale(1.04);
+}
     </style>
 </head>
 <body>
@@ -130,6 +191,8 @@ be neutralized.</p>
 not about computer security as a whole and so doesn’t cover topics such as encryption, access control, authorization mechanisms, viruses and Trojan horses, etc. These
 are described in detail in general texts on computer security (Anderson, 2008;
 Bishop, 2005; Pfleeger and Pfleeger, 2007).</p>
+                <img src="14.1.png" class="animated-section">
+
                 <p>The majority of external attacks focus on system infrastructures because infrastructure components (e.g., web browsers) are well known and widely available.
 Attackers can probe these systems for weaknesses and share information about vulnerabilities that they have discovered. As many people use the same software,
 attacks have wide applicability. Infrastructure vulnerabilities may lead to attackers
@@ -172,7 +235,11 @@ of the system design process.</p>
         
     </main>
     <footer>
-        <p>&copy; <a href="https://github.com/FireFlyDeveloper">Saludes, </a> <a href="https://github.com/CDTdavidhaboc">Haboc, </a> <a href="https://github.com/AxelBunsay">Bunsay, </a> <a href="https://github.com/Marriel223">Dastas</a></p>
+        <p>&copy; <a href="https://github.com/FireFlyDeveloper">Saludes, </a> 
+          <a href="https://github.com/CDTdavidhaboc">Haboc, </a> 
+          <a href="https://github.com/AxelBunsay">Bunsay, </a> 
+          <a href="https://github.com/Marriel223">Dastas</a>
+        </p>
     </footer>
 </body>
 </html>

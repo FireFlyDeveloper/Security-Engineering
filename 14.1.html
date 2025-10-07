@@ -127,6 +127,8 @@ been made. The aim of this assessment process is to decide if an adequate level
 of security can be achieved at a reasonable cost. If this is the case, you can then
 derive specific security requirements for the system. You do not have information about potential vulnerabilities in the system or the controls that are included
 in reused system components or middleware.</li>
+
+                  
                     <li>Life-cycle risk assessment This risk assessment takes place during the system
 development life cycle and is informed by the technical system design and
 implementation decisions. The results of the assessment may lead to changes to
@@ -167,6 +169,8 @@ system that transfer money to the perpetrator’s bank account.</li>
             <p>Misuse cases are not just useful in preliminary risk assessment but may be used
 for security analysis in life-cycle risk analysis and operational risk analysis. They
 provide a useful basis for playing out hypothetical attacks on the system and assessing the security implications of design decisions that have been made.</p>
+            
+            <img src="14.2.png" alt="">
             <p>Based on organizational security policies, preliminary risk assessment should identify the most important security requirements for a system. These reflect how the
 security policy should be implemented in that application, identify the assets to be
 protected, and decide what approach should be used to provide that protection.
@@ -214,29 +218,56 @@ because it appears to offer the most extensive functionality for the lowest deve
             <p>When you develop an application by reusing an existing system, you have to
 accept the design decisions made by the developers of that system. Let us assume
 that some of these design decisions are as follows:</p>
-                <ol>
-                    <li>System users are authenticated using a login name/password combination. No
-other authentication method is supported.</li>
-                    <li>The system architecture is client-server, with clients accessing data through a
-standard web browser on a client PC.</li>
-                    <li>Information is presented to users as an editable web form. They can change
-information in place and upload the revised information to the server.</li>
-                </ol>
+            <table style="width:100%; border-collapse:collapse; margin: 1rem 0;">
+                <thead>
+                    <tr>
+                        <th style="width:2rem; border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:center;">#</th>
+                        <th style="border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:left;">Design Decision</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">1.</td>
+                        <td style="border:1px solid #36BFFA;">System users are authenticated using a login name/password combination. No other authentication method is supported.</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">2.</td>
+                        <td style="border:1px solid #36BFFA;">The system architecture is client-server, with clients accessing data through a standard web browser on a client PC.</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">3.</td>
+                        <td style="border:1px solid #36BFFA;">Information is presented to users as an editable web form. They can change information in place and upload the revised information to the server.</td>
+                    </tr>
+                </tbody>
+            </table>
             <p>For a generic system, these design decisions are perfectly acceptable, but a lifecycle risk analysis reveals that they have associated vulnerabilities. Once vulnerabilities have been identified, you then have to make a decision on
 what steps that you can take to reduce the associated risks. This will often involve
 making decisions about additional system security requirements or the operational
 process of using the system. I don’t have space here to discuss all the requirements
 that might be proposed to address the inherent vulnerabilities, but some examples of
 requirements might be the following:</p>
-                <ol>
-                    <li>A password checker program shall be made available and shall be run daily.
-User passwords that appear in the system dictionary shall be identified and users
-with weak passwords reported to system administrators.</li>
-                    <li>Access to the system shall only be allowed to client computers that have been
-approved and registered with the system administrators.</li>
-                    <li>All client computers shall have a single web browser installed as approved by
-system administrators.</li>
-                </ol>
+            <table style="width:100%; border-collapse:collapse; margin: 1rem 0;">
+                <thead>
+                    <tr>
+                        <th style="width:2rem; border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:center;">#</th>
+                        <th style="border:1px solid #36BFFA; background:#36BFFA; color:#fff; text-align:left;">Requirement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">1.</td>
+                        <td style="border:1px solid #36BFFA;">A password checker program shall be made available and shall be run daily. User passwords that appear in the system dictionary shall be identified and users with weak passwords reported to system administrators.</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">2.</td>
+                        <td style="border:1px solid #36BFFA;">Access to the system shall only be allowed to client computers that have been approved and registered with the system administrators.</td>
+                    </tr>
+                    <tr>
+                        <td style="border:1px solid #36BFFA; text-align:center;">3.</td>
+                        <td style="border:1px solid #36BFFA;">All client computers shall have a single web browser installed as approved by system administrators.</td>
+                    </tr>
+                </tbody>
+            </table>
             <p>As an off-the-shelf system is used, it isn’t possible to include a password checker in
 the application system itself, so a separate system must be used. Password checkers analyze the strength of user passwords when they are set up, and notify users if they have
 chosen weak passwords. Therefore, vulnerable passwords can be identified reasonably quickly after they have been set up, and action can then be taken to ensure that users
