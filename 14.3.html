@@ -5,267 +5,263 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>14.3 System survivability</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        header { background-color: #333; color: white; padding: 1rem; text-align: center; }
-        nav { background-color: #444; padding: 0.5rem; }
-        nav ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; }
-        nav li { margin: 0 1rem; }
-        nav a { color: white; text-decoration: none; }
-        main { padding: 2rem; }
-        section { margin-bottom: 2rem; }
-        footer { background-color: #333; color: white; text-align: center; padding: 1rem; }
-    </style>
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 
-<body>
+<body id="kim_eduard">
     <header>
-        <h1>14.3 System survivability</h1>
-        <nav>
-        <ul>
-            <li><a href="index.html">Introduction</a></li>
-            <li><a href="14.1.html">Security Risk Management</button></li>
-            <li><a href="14.2.html">Design for Security</a></li>
-            <li><a href="14.3.html">System Survivability</a></li>
-        </ul>
-    </nav>
+        <h1 class="text-2xl font-bold mb-4">14.3 System Survivability</h1>
+        <div class="grid gap-4 pt-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8">
+            <a href="index.html" class="block text-blue-600 hover:text-blue-800 font-medium">Introduction</a>
+            <a href="14.1.html" class="block text-blue-600 hover:text-blue-800 font-medium">Security Risk Management</a>
+            <a href="14.2.html" class="block text-blue-600 hover:text-blue-800 font-medium">Design for Security</a>
+            <a href="14.3.html" class="block text-blue-600 hover:text-blue-800 font-medium">System Survivability</a>
+        </div>
     </header>
 
     <main>
-        <p> &nbsp;So far, I have discussed security engineering from the perspective of an application that is
-            under development. The system procurer and developer have control over all aspects of
-            the system that might be attacked. In reality, as I suggested in Figure 14.1, modern dis
-            tributed systems inevitably rely on an infrastructure that includes off-the-shelf systems
-            and reusable components that have been developed by different organizations. The secu
-            rity of these systems does not just depend on local design decisions. It is also affected by
-            the security of external applications, web services, and the network infrastructure.
-        </p>
+        <section>
+            <p> &nbsp;So far, I have discussed security engineering from the perspective of an application that is
+                under development. The system procurer and developer have control over all aspects of
+                the system that might be attacked. In reality, as I suggested in Figure 14.1, modern dis
+                tributed systems inevitably rely on an infrastructure that includes off-the-shelf systems
+                and reusable components that have been developed by different organizations. The secu
+                rity of these systems does not just depend on local design decisions. It is also affected by
+                the security of external applications, web services, and the network infrastructure.
+            </p>
 
-        <p> &nbsp;This means that, irrespective of how much attention is paid to security, it cannot be
-            guaranteed that a system will be able to resist external attacks. Consequently, for com
-            plex networked systems, you should assume that penetration is possible and that the
-            integrity of the system cannot be guaranteed. You should therefore think about how to
-            make the system resilient so that it survives to deliver essential services to users.
-        </p>
+            <p> &nbsp;This means that, irrespective of how much attention is paid to security, it cannot be
+                guaranteed that a system will be able to resist external attacks. Consequently, for com
+                plex networked systems, you should assume that penetration is possible and that the
+                integrity of the system cannot be guaranteed. You should therefore think about how to
+                make the system resilient so that it survives to deliver essential services to users.
+            </p>
 
-        <p>
-            &nbsp;Survivability or resilience (Westmark, 2004) is an emergent property of a system
-            as a whole, rather than a property of individual components, which may not them
-            selves be survivable. The survivability of a system reflects its ability to continue to
-            deliver essential business or mission-critical services to legitimate users while it is
-            under attack or after part of the system has been damaged. The damage could be
-            caused by an attack or by a system failure.
-        </p>
+            <p>
+                &nbsp;Survivability or resilience (Westmark, 2004) is an emergent property of a system
+                as a whole, rather than a property of individual components, which may not them
+                selves be survivable. The survivability of a system reflects its ability to continue to
+                deliver essential business or mission-critical services to legitimate users while it is
+                under attack or after part of the system has been damaged. The damage could be
+                caused by an attack or by a system failure.
+            </p>
 
-        <p>
-            &nbsp;Work on system survivability was prompted by the fact that our economic and social
-            lives are dependent on a computer-controlled critical infrastructure. This includes the
-            infrastructure for delivering utilities (power, water, gas, etc.) and, equally critically, the
-            infrastructure for delivering and managing information (telephones, Internet, postal
-            service, etc.). However, survivability is not simply a critical infrastructure issue. Any
-            organization that relies on critical networked computer systems should be concerned
-            with how its business would be affected if their systems did not survive a malicious
-            attack or catastrophic system failure. Therefore, for business critical systems, surviv
-            ability analysis and design should be part of the security engineering process.
-        </p>
+            <p>
+                &nbsp;Work on system survivability was prompted by the fact that our economic and social
+                lives are dependent on a computer-controlled critical infrastructure. This includes the
+                infrastructure for delivering utilities (power, water, gas, etc.) and, equally critically, the
+                infrastructure for delivering and managing information (telephones, Internet, postal
+                service, etc.). However, survivability is not simply a critical infrastructure issue. Any
+                organization that relies on critical networked computer systems should be concerned
+                with how its business would be affected if their systems did not survive a malicious
+                attack or catastrophic system failure. Therefore, for business critical systems, surviv
+                ability analysis and design should be part of the security engineering process.
+            </p>
 
-        <p>
-            &nbsp;Maintaining the availability of critical services is the essence of survivability.
-            This means that you have to know:
-        </p>
+            <p>
+                &nbsp;Maintaining the availability of critical services is the essence of survivability.
+                This means that you have to know:
+            </p>
 
-        <ul>
-            <li>
-                <p>the system services that are the most critical for a business;</p>
-            </li>
-            <li>
-                <p>the minimal quality of service that must be maintained;</p>
-            </li>
-            <li>
-                <p>how these services might be compromised;</p>
-            </li>
-            <li>
-                <p>how these services can be protected;</p>
-            </li>
-            <li>
-                <p>how you can recover quickly if the services become unavailable.</p>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <p>the system services that are the most critical for a business;</p>
+                </li>
+                <li>
+                    <p>the minimal quality of service that must be maintained;</p>
+                </li>
+                <li>
+                    <p>how these services might be compromised;</p>
+                </li>
+                <li>
+                    <p>how these services can be protected;</p>
+                </li>
+                <li>
+                    <p>how you can recover quickly if the services become unavailable.</p>
+                </li>
+            </ul>
 
-        <p>
-            &nbsp;For example, in a system that handles ambulance dispatch in response to emergency
-            calls, the critical services are those concerned with taking calls and dispatching ambu
-            lances to the medical emergency. Other services, such as call logging and ambulance
-            location management, are less critical, either because they do not require real-time pro
-            cessing or because alternative mechanisms may be used. For example, to find an ambu
-            lance’s location you can call the ambulance crew and ask them where they are.
-        </p>
+            <p>
+                &nbsp;For example, in a system that handles ambulance dispatch in response to emergency
+                calls, the critical services are those concerned with taking calls and dispatching ambu
+                lances to the medical emergency. Other services, such as call logging and ambulance
+                location management, are less critical, either because they do not require real-time pro
+                cessing or because alternative mechanisms may be used. For example, to find an ambu
+                lance’s location you can call the ambulance crew and ask them where they are.
+            </p>
 
-        <p>
-            &nbsp;Ellison and colleagues (1999a; 1999b; 2002) have designed a method of analysis
-            called Survivable Systems Analysis. This is used to assess vulnerabilities in systems
-            and to support the design of system architectures and features that promote system
-            survivability. They argue that achieving survivability depends on three complemen
-            tary strategies:
-        </p>
+            <p>
+                &nbsp;Ellison and colleagues (1999a; 1999b; 2002) have designed a method of analysis
+                called Survivable Systems Analysis. This is used to assess vulnerabilities in systems
+                and to support the design of system architectures and features that promote system
+                survivability. They argue that achieving survivability depends on three complemen
+                tary strategies:
+            </p>
 
-        <ol>
-            <li>
-                <p><em>Resistance</em> Avoiding problems by building capabilities into the system to repel
-                    attacks. For example, a system may use digital certificates to authenticate users,
-                    thus making it more difficult for unauthorized users to gain access.
-                </p>
-            </li>
+            <ol>
+                <li>
+                    <p><em>Resistance</em> Avoiding problems by building capabilities into the system to repel
+                        attacks. For example, a system may use digital certificates to authenticate users,
+                        thus making it more difficult for unauthorized users to gain access.
+                    </p>
+                </li>
 
-            <li>
-                <p><em>Recognition</em> Detecting problems by building capabilities into the system to detect
-                    attacks and failures and assess the resultant damage. For example, checksums may
-                    be associated with critical data so that corruptions to that data can be detected.
-                </p>
-            </li>
+                <li>
+                    <p><em>Recognition</em> Detecting problems by building capabilities into the system to detect
+                        attacks and failures and assess the resultant damage. For example, checksums may
+                        be associated with critical data so that corruptions to that data can be detected.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Recovery</em> Tolerating problems by building capabilities into the system to deliver
-                    essential services while under attack, and to recover full functionality after an attack. For
-                    example, fault tolerance mechanisms using diverse implementations
-                    of the same functionality may be included to cope with a loss of service from
-                    one part of the system.
-                </p>
-            </li>
+                <li>
+                    <p>
+                        <em>Recovery</em> Tolerating problems by building capabilities into the system to deliver
+                        essential services while under attack, and to recover full functionality after an attack. For
+                        example, fault tolerance mechanisms using diverse implementations
+                        of the same functionality may be included to cope with a loss of service from
+                        one part of the system.
+                    </p>
+                </li>
 
-            <img src="image.png" alt="visual image">
-        </ol>
+                <img src="image.png" alt="visual image">
+            </ol>
+        </section>
 
-        <p><b>Figure 14.8</b> Stages in survivability analysis</p>
+        <section>
+            <p><b>Figure 14.8</b> Stages in survivability analysis</p>
 
-        <p>
-            &nbsp;Survivable systems analysis is a four-stage process (Figure 14.8) that analyzes the
-            current or proposed system requirements and architecture; identifies critical serv
-            ices, attack scenarios, and system ‘softspots’; and proposes changes to improve the
-            survivability of a system. The key activities in each of these stages are as follows:
-        </p>
+            <p>
+                &nbsp;Survivable systems analysis is a four-stage process (Figure 14.8) that analyzes the
+                current or proposed system requirements and architecture; identifies critical serv
+                ices, attack scenarios, and system ‘softspots’; and proposes changes to improve the
+                survivability of a system. The key activities in each of these stages are as follows:
+            </p>
 
-        <ol>
-            <li>
-                <p>
-                    <em>System understanding</em> For an existing or proposed system, review the goals of
-                    the system (sometimes called the mission objectives), the system requirements,
-                    and the system architecture.
-                </p>
-            </li>
+            <ol>
+                <li>
+                    <p>
+                        <em>System understanding</em> For an existing or proposed system, review the goals of
+                        the system (sometimes called the mission objectives), the system requirements,
+                        and the system architecture.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Critical service identification</em> The services that must always be maintained and
-                    the components that are required to maintain these services are identified.
-                </p>
-            </li>
+                <li>
+                    <p>
+                        <em>Critical service identification</em> The services that must always be maintained and
+                        the components that are required to maintain these services are identified.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Attack simulation</em> Scenarios or use cases for possible attacks are identified along
-                    with the system components that would be affected by these attacks.
-                </p>
-            </li>
+                <li>
+                    <p>
+                        <em>Attack simulation</em> Scenarios or use cases for possible attacks are identified along
+                        with the system components that would be affected by these attacks.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Survivability analysis</em> Components that are both essential and compromisable
-                    by an attack are identified and survivability strategies based on resistance,
-                    recognition, and recovery are identified.
-                </p>
-            </li>
-        </ol>
+                <li>
+                    <p>
+                        <em>Survivability analysis</em> Components that are both essential and compromisable
+                        by an attack are identified and survivability strategies based on resistance,
+                        recognition, and recovery are identified.
+                    </p>
+                </li>
+            </ol>
 
-        <p>
-            &nbsp;Ellison and his colleagues present an excellent case study of the method based on
-            a system to support mental health treatment (1999b). This system is similar to the
-            MHC-PMS that I have used as an example in this book. Rather than repeat their
-            analysis, I use the equity trading system, as shown in Figure 14.5, to illustrate some
-            of the features of survivability analysis.
-        </p>
+            <p>
+                &nbsp;Ellison and his colleagues present an excellent case study of the method based on
+                a system to support mental health treatment (1999b). This system is similar to the
+                MHC-PMS that I have used as an example in this book. Rather than repeat their
+                analysis, I use the equity trading system, as shown in Figure 14.5, to illustrate some
+                of the features of survivability analysis.
+            </p>
 
-        <p>
-            &nbsp;As you can see from Figure 14.5, this system already has already made some provi
-            sion for survivability. User accounts and equity prices are replicated across servers so that
-            orders can be placed even if the local server is unavailable. Let’s assume that the capabil
-            ity for authorized users to place orders for stock is the key service that must be main
-            tained. To ensure that users trust the system, it is essential that integrity be maintained.
-            Orders must be accurate and reflect the actual sales or purchases made by a system user.
-        </p>
+            <p>
+                &nbsp;As you can see from Figure 14.5, this system already has already made some provi
+                sion for survivability. User accounts and equity prices are replicated across servers so that
+                orders can be placed even if the local server is unavailable. Let’s assume that the capabil
+                ity for authorized users to place orders for stock is the key service that must be main
+                tained. To ensure that users trust the system, it is essential that integrity be maintained.
+                Orders must be accurate and reflect the actual sales or purchases made by a system user.
+            </p>
 
-        <img src="image1.png" alt="visual image">
+            <img src="image1.png" alt="visual image">
+        </section>
 
-        <p><b>Figure 14.9</b> Survivability analysis in an equity trading system</p>
-        <p>
-            &nbsp;To maintain this ordering service, there are three components of the system that
-            are used:
-        </p>
+        <section>
+            <p><b>Figure 14.9</b> Survivability analysis in an equity trading system</p>
+            <p>
+                &nbsp;To maintain this ordering service, there are three components of the system that
+                are used:
+            </p>
 
-        <ol>
-            <li>
-                <p>
-                    <em>User authentication</em> This allows authorized users to log on to the system.
-                </p>
-            </li>
+            <ol>
+                <li>
+                    <p>
+                        <em>User authentication</em> This allows authorized users to log on to the system.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Price quotation</em> This allows the buying and selling price of a stock to be quoted.
-                </p>
-            </li>
+                <li>
+                    <p>
+                        <em>Price quotation</em> This allows the buying and selling price of a stock to be quoted.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    <em>Order placement</em> This allows buy and sell orders at a given price to be made.
-                </p>
-            </li>
-        </ol>
+                <li>
+                    <p>
+                        <em>Order placement</em> This allows buy and sell orders at a given price to be made.
+                    </p>
+                </li>
+            </ol>
 
-        <p>
-            &nbsp;These components obviously make use of essential data assets such as a user
-            account database, a price database, and an order transaction database. These must
-            survive attacks if service is to be maintained.
-        </p>
+            <p>
+                &nbsp;These components obviously make use of essential data assets such as a user
+                account database, a price database, and an order transaction database. These must
+                survive attacks if service is to be maintained.
+            </p>
 
-        <p>
-            &nbsp;There are several different types of attack on this system that might be made.
-            Let’s consider two possibilities here:
-        </p>
+            <p>
+                &nbsp;There are several different types of attack on this system that might be made.
+                Let’s consider two possibilities here:
+            </p>
 
-        <ol>
-            <li>
-                <p>
-                    A malicious user has a grudge against an accredited system user. He gains access
-                    to the system using their credentials. Malicious orders are placed and stock is
-                    bought and sold, with the intention of causing problems for the authorized user.
-                </p>
-            </li>
+            <ol>
+                <li>
+                    <p>
+                        A malicious user has a grudge against an accredited system user. He gains access
+                        to the system using their credentials. Malicious orders are placed and stock is
+                        bought and sold, with the intention of causing problems for the authorized user.
+                    </p>
+                </li>
 
-            <li>
-                <p>
-                    An unauthorized user corrupts the database of transactions by gaining permis
-                    sion to issue SQL commands directly. Reconciliation of sales and purchases is
-                    therefore impossible.
-                </p>
-            </li>
-        </ol>
+                <li>
+                    <p>
+                        An unauthorized user corrupts the database of transactions by gaining permis
+                        sion to issue SQL commands directly. Reconciliation of sales and purchases is
+                        therefore impossible.
+                    </p>
+                </li>
+            </ol>
+        </section>
 
-        <p>
-            &nbsp;Figure 14.9 shows examples of resistance, recognition, and recovery strategies
-            that might be used to help counter these attacks.
-        </p>
+        <section>
+            <p>
+                &nbsp;Figure 14.9 shows examples of resistance, recognition, and recovery strategies
+                that might be used to help counter these attacks.
+            </p>
 
-        <p>
-            &nbsp;Increasing the survivability or resilience of a system of course costs money.
-            Companies may be reluctant to invest in survivability if they have never suffered a
-            serious attack or associated loss. However, just as it is best to buy good locks and an
-            alarm before rather than after your house is burgled, it is best to invest in survivabil
-            ity before, rather than after, a successful attack. Survivability analysis is not yet part
-            of most software engineering processes but, as more and more systems become busi
-            ness critical, such analyzes are likely to become more widely used.
-        </p>
+            <p>
+                &nbsp;Increasing the survivability or resilience of a system of course costs money.
+                Companies may be reluctant to invest in survivability if they have never suffered a
+                serious attack or associated loss. However, just as it is best to buy good locks and an
+                alarm before rather than after your house is burgled, it is best to invest in survivabil
+                ity before, rather than after, a successful attack. Survivability analysis is not yet part
+                of most software engineering processes but, as more and more systems become busi
+                ness critical, such analyzes are likely to become more widely used.
+            </p>
+        </section>
 
         <section>
             <h3>KEY POINTS</h2>
@@ -275,27 +271,30 @@
                         <p>
                             Security engineering focuses on how to develop and maintain software systems that can resist
                             malicious attacks intended to damage a computer-based system or its data.
-                        ></p>
-                    </li>
-
-                    <li>
-                        <p></p>
-                            Security threats can be threats to the confidentiality, integrity, or availability of a
-                            system or its data.
                         </p>
                     </li>
 
                     <li>
                         <p>
-                            Security risk management involves assessing the losses that might ensue from attacks on a system,
+                        Security threats can be threats to the confidentiality, integrity, or availability of a
+                        system or its data.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            Security risk management involves assessing the losses that might ensue from attacks on a
+                            system,
                             and deriving security requirements that are aimed at eliminating or reducing these losses.
                         </p>
                     </li>
 
                     <li>
                         <p>
-                            Design for security involves designing a secure system architecture, following good practice for
-                            secure systems design, and including functionality to minimize the possibility of introducing
+                            Design for security involves designing a secure system architecture, following good practice
+                            for
+                            secure systems design, and including functionality to minimize the possibility of
+                            introducing
                             vulnerabilities when the system is deployed.
                         </p>
                     </li>
@@ -303,15 +302,17 @@
                     <li>
                         <p>
                             Key issues when designing a secure systems architecture include organizing the system
-                            structure to protect key assets and distributing the system assets to minimize the losses from
-                            a successful attack.   
-                    
+                            structure to protect key assets and distributing the system assets to minimize the losses
+                            from
+                            a successful attack.
+
                         </p>
                     </li>
 
                     <li>
                         <p>
-                            Security design guidelines sensitize system designers to security issues that they may not have
+                            Security design guidelines sensitize system designers to security issues that they may not
+                            have
                             considered. They provide a basis for creating security review checklists.
                         </p>
                     </li>
@@ -327,8 +328,10 @@
 
                     <li>
                         <p>
-                            System survivability reflects the ability of a system to continue to deliver essential business or
-                            mission-critical services to legitimate users while it is under attack, or after part of the system
+                            System survivability reflects the ability of a system to continue to deliver essential
+                            business or
+                            mission-critical services to legitimate users while it is under attack, or after part of the
+                            system
                             has been damaged.
                         </p>
                     </li>
@@ -361,7 +364,7 @@
         <section>
             <h3>EXERCISES</h3>
 
-            <li start="14">
+            <ol start="14">
                 <li>
                     <p>
                         1. Explain the important differences between application security engineering and
@@ -396,19 +399,19 @@
                         approach to asset protection should be used.
                     </p>
                 </li>
-                
+
                 <li>
                     <p>
                         6. Explain why it is important to use diverse technologies to support distributed systems in
-                        situations where system availability is critical. 
-                    </p> 
+                        situations where system availability is critical.
+                    </p>
                 </li>
 
                 <li>
                     <p>
                         7. What is social engineering? Why is it difficult to protect against it in large organizations?
                     </p>
-                    
+
                 </li>
 
                 <li>
