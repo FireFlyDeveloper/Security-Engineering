@@ -1,16 +1,23 @@
 @import "tailwindcss"; 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-html {
+@theme {
   --font-poppins: "Poppins", sans-serif;  
-  font-family: var(--font-poppins);       
+}
+
+html{       
   @apply scroll-smooth;
+}
+
+@keyframes gradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
 
 #DAVID {
-  @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto];
-  
+  @apply cursor-[url('/Diamond-Sword-16x16.png')_0_0,_auto] bg-white;
+  font-family: var(--font-poppins);
 }
 
 #DAVID a:hover {
@@ -18,11 +25,11 @@ html {
 }
 
 #DAVID .head {
-  @apply bg-gray-900 text-white;
+  @apply bg-gray-900 text-white rounded-lg m-2;
 }
 
 #DAVID #title {
-  @apply  text-center text-3xl pt-3 pb-3
+  @apply text-center text-3xl pt-3 pb-3
     sm:text-4xl
     md:text-5xl
     lg:text-6xl
@@ -30,16 +37,16 @@ html {
 }
 
 #DAVID .author {
-  @apply text-left text-gray-200 sm:text-base md:text-lg flex items-center justify-start gap-2 w-full;
+  @apply text-center ml-7 lg:text-left lg:ml-0 text-gray-200 sm:text-base md:text-lg items-center gap-2 w-full;
 }
 
 
 #DAVID .list {
-  @apply bg-gray-800 p-4 pt-1 pb-1;
+  @apply bg-gray-800 p-4 pt-1 pb-1 rounded-b-lg;
 }
 
 #DAVID .pindot {
-  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center text-center text-sm sm:text-base md:text-lg lg:text-lg ;
+  @apply grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center text-center text-sm sm:text-base md:text-lg lg:text-lg ;
 }
 
 #DAVID .column{
@@ -47,7 +54,7 @@ html {
 }
 
 #DAVID #main {
-  @apply flex flex-col
+  @apply flex flex-col 
     sm:flex-row
     md:flex-row
     lg:flex-row
@@ -55,45 +62,47 @@ html {
 }
 
 #DAVID .navigation {
-  @apply grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-4
-         w-max sm:max-w-sm md:max-w-md lg:max-w-xs 
-         mr-5 sticky top-8 self-start h-max 
-         transition-all duration-300 ease-in-out;
+  @apply grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 gap-3
+        w-max sm:max-w-sm md:max-w-md lg:max-w-xs 
+        mr-1 sticky top-2 self-start h-max 
+        transition-all duration-300 ease-in-out;
 }
 
 #DAVID .responsiveNav {
-  @apply hidden md:block lg:block sticky col-span-1 left-0 h-max w-full max-w-xs ml-4 mt-2 mr-4 p-4 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
+  @apply hidden sm:block md:block lg:block sticky col-span-1 left-0 h-max w-full max-w-xs ml-2 mt-2 mr-2 p-5 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg;
 }
 
 #DAVID .divNav{
-  @apply text-left flex flex-col font-medium text-base transition-colors duration-300;
+  @apply text-left flex flex-col font-medium text-base transition-colors duration-300 ;
 }
 #DAVID .responsiveAuth {
-  @apply hidden md:block lg:block sticky top-auto col-end-1 left-0 w-full max-w-xs p-4 bg-gray-800 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg ml-4;
+  @apply hidden sm:block md:block lg:block sticky top-auto col-end-1 left-0 w-full max-w-xs p-4 rounded-lg shadow-md transition-all duration-300 hover:shadow-lg ml-2 bg-gradient-to-r from-gray-600 via-gray-800 to-gray-600 bg-[length:200%_200%] animate-[gradient_6s_ease_infinite] ;
 }
 
 #DAVID .hideflexNum {
-  @apply hidden md:inline lg:inline xl:hidden;
+  @apply hidden sm:block md:inline lg:inline xl:hidden;
 }
 
 #DAVID .flexWords {
-  @apply hidden xl:inline;
+  @apply hidden xl:inline text-sm;
 }
 
 #DAVID .sideText {
   @apply block ml-4 pl-2 text-white hover:text-gray-400;
 }
 
+#DAVID .sideTextTable {
+  @apply block ml-4 pl-2 text-white hover:text-gray-400 indent-5;
+}
+
 #DAVID .articles {
-  @apply mt-2 p-3 bg-gray-200  leading-loose rounded-lg text-justify shadow-md text-sm mb-6 w-full max-w-full
+  @apply mt-2 p-3 bg-gray-200 leading-loose rounded-lg text-justify shadow-md text-sm mb-6 mr-2 ml-2 max-w-full
     sm:text-base sm:mb-8 sm:p-4 sm:max-w-2xl
     md:text-lg md:mb-10 md:p-6 md:max-w-5xl
     lg:text-xl lg:mb-6 lg:p-8 lg:max-w-6xl
-    xl:text-xl xl:mb-4 xl:p-10 xl:max-w-6xl;
+    xl:text-xl xl:mb-4 xl:p-10 xl:max-w-7xl;
 }
-@theme{
-    --font-poppins: 'Poppins', sans-serif;
-}
+
 #xenxide body {
     @apply m-0 p-0 text-slate-800;
   }
