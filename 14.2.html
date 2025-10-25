@@ -9,6 +9,7 @@
 </head>
 <body id="DAVID">
 
+
     <header class="head" id="home">
         <h1 id="title">Design for Security </h1>
             <nav class="list">
@@ -41,9 +42,9 @@
                 <nav class="responsiveNav ">
                     <div class="divNav">
                     <p class="italic mb-3 text-gray-400">Subtopics</p>
-                    <ol class="flex flex-col space-y-3 list-none">
+                    <ol class="flex flex-col space-y-3 list-none sm:flex-2">
                         <li>
-                        <a href="#home" class="block  ml-4 pl-2 pr-10 text-white hover:text-gray-400">
+                        <a href="#home" class="block  ml-4 text-sm pl-2 pr-10 text-white hover:text-gray-400">
                             Home
                         </a>
                         </li>
@@ -62,7 +63,37 @@
                         <li>
                         <a href="#fortri" class="sideText">
                             <span class="hideflexNum">14.2.3</span>
-                            <span class="flexWords">14.2.3 Design for Deployment</span>
+                            <span class="flexWords">14.2.3 Design for Deployment</p></span>
+                        </a>
+                        </li>
+                    </ol>
+
+                    <ol class="flex flex-col space-y-3 list-none sm:flex-2">
+                        <li>
+                        <p class="italic mt-4 indent-7 text-gray-400">Tables & Graph</p>
+                        </li>
+                        <li>
+                        <a href="#tab1" class="sideTextTable">
+                            <span class="hideflexNum">14.4</span>
+                            <span class="flexWords">14.4 Layered Protection <p class="indent-12">Architecture</p></span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#tab2" class="sideTextTable">
+                            <span class="hideflexNum">14.5</span>
+                            <span class="flexWords">14.5 Distributed Assets</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#tab3" class="sideTextTable">
+                            <span class="hideflexNum">14.6</span>
+                            <span class="flexWords">14.6 Design Guidelines</span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="#tab4" class="sideTextTable">
+                            <span class="hideflexNum">14.7</span>
+                            <span class="flexWords">14.7 Software Deployment</p></span>
                         </a>
                         </li>
                     </ol>
@@ -72,13 +103,13 @@
         
                 <div class="responsiveAuth">
             <div class="author">
-                <a href="https://www.facebook.com/davidhbc" title="David Haboc"
-                class="flex items-center gap-2 hover:text-gray-200">
-                <img src="haboc.jpg" alt="David Emanuel A Haboc"
-                    class="hidden xl:block rounded-full w-10 h-10 object-cover">
+                <a href="https://www.facebook.com/davidhbc" title="David Haboc" class="flex items-center gap-2 hover:text-gray-200">
+                <img src="haboc.jpg" alt="David Emanuel A Haboc" class="hidden xl:block rounded-full w-15 h-15 object-cover hover:scale-110">
                 <div class="flex flex-col leading-tight">
-                    <i>David Emanuel A Haboc</i>
+                    <p class="sm:hidden md:hidden lg:block xl:block xl:text-sm">David Emanuel A Haboc</p>
+                    <i class="sm:block md:block lg:hidden xl:hidden hover:underline ">David</i>
                     <h3 class="text-sm text-gray-500 font-normal">Designer</h3>
+                    <button class="rounded-lg text-sm border-2 border-gray-400 mt-2 bg-gray-900 hover:bg-gray-700 hover:-translate-y-1 duration-300" >Message</button>
                 </div>
                 </a>
             </div>
@@ -87,7 +118,7 @@
 
         <section>
             <article class="articles">
-                    <p>It is generally true that it is very difficult to add security to a system after it has been
+                    <p class="indent-8"> It is generally true that it is very difficult to add security to a system after it has been
                         implemented. Therefore, you need to take security issues into account during the
                         systems design process. In this section, I focus primarily on issues of system design,
                         because this topic isn’t given the attention it deserves in computer security books.
@@ -95,7 +126,7 @@
                         are often dependent on the specific technology used. I recommend Viega and
                         McGraw’s book (2002) as a good introduction to programming for security.
                     </p>
-                    <p>
+                    <p class="mt-4">
                         Here, I focus on a number of general, application-independent issues relevant to
                         secure systems design:
                     </p>
@@ -114,15 +145,15 @@
             </article>
  
             <article class="articles">
-                <h1 class=" text-3xl mb-2"><b>Denial of service attacks</b></h1>
-                    <p>Denial of service attacks attempt to bring down a networked system by bombarding it with a huge number of
+                <h1 class=" text-lg md:text-3xl mb-2"><b>Denial of service attacks</b></h1>
+                    <p class="indent-8">Denial of service attacks attempt to bring down a networked system by bombarding it with a huge number of
                         service requests. These place a load on the system for which it was not designed and they exclude legitimate
                         requests for system service. Consequently, the system may become unavailable either because it crashes with
                         the heavy load or has to be taken offline by system managers to stop the flow of requests. </p>
                     
-                    <a href="http://www.SoftwareEngineering-9.com/Web/Security/DoS.html">http://www.SoftwareEngineering-9.com/Web/Security/DoS.html</a>
+                    <a href="http://www.SoftwareEngineering-9.com/Web/Security/DoS.html" class="text-gray-600 hover:underline">http://www.SoftwareEngineering-9.com/Web/Security/DoS.html</a>
                     
-                    <p>Of course, these are not the only design issues that are important for security. Every
+                    <p class="mt-4 indent-8">Of course, these are not the only design issues that are important for security. Every
                         application is different and security design also has to take into account the purpose,
                         criticality, and operational environment of the application. For example, if you are
                         designing a military system, you need to adopt their security classification model
@@ -147,24 +178,24 @@
                         operation for security checks would be completely unacceptable.</p>
             </article>
             <article id="forwan" class="articles">
-                        <h3  class="text-3xl mb-2"><b>14.2.1 Architectural design</b></h3>
+                        <h3  class="text-lg md:text-3xl mb-2"><b>14.2.1 Architectural design</b></h3>
             
-                        <p>As I have discussed in Chapter 11, the choice of software architecture can have
+                        <p class="indent-8 mt-4">As I have discussed in Chapter 11, the choice of software architecture can have
                             profound effects on the emergent properties of a system. If an inappropriate
                             architecture is used, it may be very difficult to maintain the confidentiality and integrity of information in the system or to guarantee a required level of system
                             availability</p>
                         
-                        <p>In designing a system architecture that maintains security, you need to consider
+                        <p class="indent-8 mt-4">In designing a system architecture that maintains security, you need to consider
                             two fundamental issues:</p>
                             <ol class="list-decimal list-inside pl-6 space-y-2">
-                                <li><b>Protection </b>—how should the system be organized so that critical assets can be
+                                <li class="indent-8"><b>Protection </b>—how should the system be organized so that critical assets can be
                                     protected against external attack?</li>
-                                <li> <b>Distribution </b>—how should system assets be distributed so that the effects of a
+                                <li class="indent-8"> <b>Distribution </b>—how should system assets be distributed so that the effects of a
                                     successful attack are minimized?
                                 </li>
                             </ol>
 
-                        <p>These issues are potentially conflicting. If you put all your assets in one place,
+                        <p class="indent-8 mt-4">These issues are potentially conflicting. If you put all your assets in one place,
                             then you can build layers of protection around them. As you only have to build a
                             single protection system, you may be able to afford a strong system with several
                             protection layers. However, if that protection fails, then all your assets are compromised. Adding several layers of protection also affects the usability of a system so
@@ -184,21 +215,23 @@
                             </p>
 
                             <ol class="list-decimal list-inside pl-6 space-y-2">
-                                <li><i><b>Platform-level protection </b></i> The top level controls access to the platform on which
+                                <li class="indent-8 mt-4"><i><b>Platform-level protection </b></i> The top level controls access to the platform on which
                                     the patient record system runs. This usually involves a user signing on to a particular computer. The platform will also normally include support for maintaining the integrity of files on the system, backups, etc</li>
-                                <li><i><b>Application-level protection</b></i> The next protection level is built into the application itself. It involves a user accessing the application, being authenticated, and
+                                <li class="indent-8 mt-4"><i><b>Application-level protection</b></i> The next protection level is built into the application itself. It involves a user accessing the application, being authenticated, and
                                     getting authorization to take actions such as viewing or modifying data.
                                     Application-specific integrity management support may be available.</li>
-                                <li><i><b>Record-level protection </b></i> This level is invoked when access to specific records is
+                                <li class="indent-8 mt-4"><i><b>Record-level protection </b></i> This level is invoked when access to specific records is
                                     required, and involves checking that a user is authorized to carry out the
                                     requested operations on that record. Protection at this level might also involve
                                     encryption to ensure that records cannot be browsed using a file browser.
                                     Integrity checking using, for example, cryptographic checksums, can detect
                                     changes that have been made outside the normal record update mechanisms.</li>
-                                    <img src="14.2.1.png" alt="">
-                                            <p><b>Figure 14.4</b> A layered protection architecture</p>
-                                </ol>
-                                <p>The number of protection layers that you need in any particular application depends
+                                    <div>
+                                    <img id="tab1"src="14.2.1.png" alt="" class="mx-auto h-100 w-100 sm:h-100 sm:w-100 xl:h-150 xl:w-150  hover:scale-110 duration-300">
+                                            <p class="text-center"><i><b>Figure 14.4</b> A layered protection architecture</i></p>
+                                    </div>
+                                        </ol>
+                                <p class="indent-8 mt-4">The number of protection layers that you need in any particular application depends
                                     on the criticality of the data. Not all applications need protection at the record level
                                     and, therefore, coarser-grain access control is more commonly used. To achieve
                                     security, you should not allow the same user credentials to be used at each level.
@@ -206,28 +239,28 @@
                                     be different from both the system password and the record-level password. However,
                                     multiple passwords are difficult for users to remember and they find repeated
                                     requests to authenticate themselves irritating. You often, therefore, have to compromise on security in favor of system usability.
-                                    <p>If protection of data is a critical requirement, then a client–server architecture
+                                    <p class="indent-8 mt-4">If protection of data is a critical requirement, then a client–server architecture
                                     should be used, with the protection mechanisms built into the server. However, if the
                                     protection is compromised, then the losses associated with an attack are likely to be
                                     high, as are the costs of recovery (e.g., all user credentials may have to be reissued).
                                     The system is vulnerable to denial of service attacks, which overload the server and
                                     make it impossible for anyone to access the system database.</p>
-                                    <p>If you think that denial of service attacks are a major risk, you may decide to use
+                                    <p class="indent-8 mt-4">If you think that denial of service attacks are a major risk, you may decide to use
                                     a distributed object architecture for the application. In this situation, illustrated in </p>
-                                    Figure 14.5, the system’s assets are distributed across a number of different platforms, with separate protection mechanisms used for each of these. An attack on one
+                                    <p class="indent-8 mt-4">Figure 14.5, the system’s assets are distributed across a number of different platforms, with separate protection mechanisms used for each of these. An attack on one
                                     node might mean that some assets are unavailable but it would still be possible to
                                     provide some system services. Data can be replicated across the nodes in the system
                                     so that recovery from attacks is simplified.
                                 </p>
-                                    <img src="14.5.png" alt="">
-                                            <p><b>Figure 14.5</b> Distributed assets in an equity trading system</p>
+                                    <img id="tab2" src="14.5.png" alt="" class="mx-auto h-100 w-100 sm:h-100 sm:w-100 xl:h-150 xl:w-150  hover:scale-110 duration-300">
+                                            <p class="text-center"><i><b>Figure 14.5</b> Distributed assets in an equity trading system</i></p>
 
-                                <p>Figure 14.5 shows the architecture of a banking system for trading in stocks and
+                                <p class="indent-8 mt-4">Figure 14.5 shows the architecture of a banking system for trading in stocks and
                                     funds on the New York, London, Frankfurt, and Hong Kong markets. The system is
                                     distributed so that data about each market is maintained separately. Assets required
                                     to support the critical activity of equity trading (user accounts and prices) are replicated and available on all nodes. If a node of the system is attacked and becomes
                                     unavailable, the critical activity of equity trading can be transferred to another country and so can still be available to users.</p>
-                                <p>    I have already discussed the problem of finding a balance between security and
+                                <p class="indent-8 mt-4">    I have already discussed the problem of finding a balance between security and
                                     system performance. A problem of secure system design is that in many cases, the
                                     architectural style that is most suitable for meeting the security requirements may
                                     not be the best one for meeting the performance requirements. For example, say an application has one absolute requirement to maintain the confidentiality of a large
@@ -241,9 +274,9 @@
 
             <article id="fortu" class="articles">
 
-                <h3  class="text-3xl mb-2"><b>14.2.2 Design Guidelines</b></h3>
+                <h3  class="text-lg md:text-3xl mb-2"><b>14.2.2 Design Guidelines</b></h3>
             
-                <p>There are no hard and fast rules about how to achieve system security. Different
+                <p class="indent-8 mt-4">There are no hard and fast rules about how to achieve system security. Different
                     types of systems require different technical measures to achieve a level of security
                     that is acceptable to the system owner. The attitudes and requirements of different
                     groups of users profoundly affect what is and is not acceptable. For example, in a
@@ -254,24 +287,24 @@
                     below, have two principal uses:</p>
                     
                     <ol class="list-decimal list-inside pl-6 space-y-2">
-                        <li>They help raise awareness of security issues in a software engineering team.
+                        <li class="indent-8 mt-4">They help raise awareness of security issues in a software engineering team.
                             Software engineers often focus on the short-term goal of getting the software
                             working and delivered to customers. It is easy for them to overlook security
                             issues. Knowledge of these guidelines can mean that security issues are considered when software design decisions are made.
                             </li>
-                        <li> They can be used as a review checklist that can be used in the system validation
+                        <li class="indent-8 mt-4"> They can be used as a review checklist that can be used in the system validation
                             process. From the high-level guidelines discussed here, more specific questions
                             can be derived that explore how security has been engineered into a system</li>
                     </ol>
 
-                    <p>The 10 design guidelines, summarized in Figure 14.6, have been derived from a
+                    <p class="indent-8 mt-4">The 10 design guidelines, summarized in Figure 14.6, have been derived from a
                         range of different sources (Schneier, 2000; Viega and McGraw, 2002; Wheeler,
                         2003). I have focused here on guidelines that are particularly applicable to the software specification and design processes. More general principles, such as ‘Secure
                         the weakest link in a system’, ‘Keep it simple’, and ‘Avoid security through obscurity’ are also important but are less directly relevant to engineering decision making.</p>
             </article>
             <article class="articles">
-                <h2 class="text-2xl"><b>Guideline 1: Base security decisions on an explicit security policy</b></h2>
-                    <p>A security policy is a high-level statement that sets out fundamental security conditions for an organization. It defines the ‘what’ of security rather than the ‘how’, so
+                <h2 class="text-lg md:text-2xl"><b>Guideline 1: Base security decisions on an explicit security policy</b></h2>
+                    <p class="indent-8 mt-4">A security policy is a high-level statement that sets out fundamental security conditions for an organization. It defines the ‘what’ of security rather than the ‘how’, so
                         the policy should not define the mechanisms to be used to provide and enforce security. In principle, all aspects of the security policy should be reflected in the system
                         requirements. In practice, especially if a rapid application development process is
                         used, this is unlikely to happen. Designers, therefore, should consult the security policy as it provides a framework for making and evaluating design decisions.
@@ -285,16 +318,16 @@
                         response to identified problems, but with no overarching policy document to guide
                         the evolution of a system. In such situations, you need to work out and document the
                         policy from examples, and confirm it with managers in the company.</p>
-                        <img src="14.6.png" alt="">
-                        <p><b>Figure 14.6</b>  Design guidelines for secure systems engineering</p>
+                        <img id="tab3" src="14.6.png" alt="" class="mx-auto h-100 w-100 sm:h-100 sm:w-100 xl:h-150 xl:w-150  hover:scale-110 duration-300">
+                        <p class="text-center"><i><b>Figure 14.6</b> Design guidelines for secure systems engineering</i></p>
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 2: Avoid a single point of failure</b></h2>
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 2: Avoid a single point of failure</b></h2>
                     
-                        <p>In any critical system, it is good design practice to try to avoid a single point of failure. This means that a single failure in part of the system should not result in an overall systems failure. In security terms, this means that you should not rely on a single
+                        <p class="indent-8 mt-4">In any critical system, it is good design practice to try to avoid a single point of failure. This means that a single failure in part of the system should not result in an overall systems failure. In security terms, this means that you should not rely on a single
                             mechanism to ensure security, rather you should employ several different techniques. This is sometimes called ‘defense in depth’</p>
-                        <p>For example, if you use a password to authenticate users to a system, you might
+                        <p class="indent-8 mt-4">For example, if you use a password to authenticate users to a system, you might
                             also include a challenge/response authentication mechanism where users have to
                             pre-register questions and answers with the system. After password authentication,
                             they must then answer questions correctly before being allowed access. To protect the integrity of data in a system, you might keep an executable log of all changes
@@ -306,11 +339,11 @@
 
                     <article class="articles">
                         <h2 class="text-2xl"> <b>Guileline 3: Fail securely</b></h2>
-                        <p>System failures are inevitable in all systems and, in the same way that safety-critical
+                        <p class="indent-8 mt-4">System failures are inevitable in all systems and, in the same way that safety-critical
                             systems should always fail-safe, security critical systems should always ‘failsecure’. When the system fails, you should not use fallback procedures that are less
                             secure than the system itself. Nor should system failure mean that an attacker can
                             access data that would not normally be allowed.</p>
-                        <p>For example, in the patient information system, I suggested a requirement that
+                        <p class="indent-8 mt-4">For example, in the patient information system, I suggested a requirement that
                             patient data should be downloaded to a system client at the beginning of a clinic session.
                             This speeds up access and means that access is possible if the server is unavailable.
                             Normally, the server deletes this data at the end of the clinic session. However, if the
@@ -320,9 +353,9 @@
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 4: Balance security and usability</b></h2>
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 4: Balance security and usability</b></h2>
 
-                            <p>The demands of security and usability are often contradictory. To make a system secure,
+                            <p class="indent-8 mt-4">The demands of security and usability are often contradictory. To make a system secure,
                                 you have to introduce checks that users are authorized to use the system and that they
                                 are acting in accordance with security policies. All of these inevitably make demands on
                                 users—they may have to remember login names and passwords, only use the system
@@ -330,7 +363,7 @@
                                 started with the system and use it effectively. As you add security features to a system,
                                 it is inevitable that it will become less usable. I recommend Cranor and Garfinkel’s book
                                 (2005) that discusses a wide range of issues in the general area of security and usability</p>
-                            <p>There comes a point where it is counterproductive to keep adding on new security
+                            <p class="indent-8 mt-4">There comes a point where it is counterproductive to keep adding on new security
                                 features at the expense of usability. For example, if you require users to input multiple passwords or to change their passwords to impossible-to-remember character
                                 strings at frequent intervals, they will simply write down these passwords. An
                                 attacker (especially an insider) may then be able to find the passwords that have been
@@ -339,15 +372,15 @@
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 5: Log user actions</b></h2>
-                        <p>If it is practically possible to do so, you should always maintain a log of user actions.
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 5: Log user actions</b></h2>
+                        <p class="indent-8 mt-4">If it is practically possible to do so, you should always maintain a log of user actions.
                             This log should, at least, record who did what, the assets used, and the time and date
                             of the action. As I discuss in Guideline 2, if you maintain this as a list of executable
                             commands, you have the option of replaying the log to recover from failures. Of
                             course, you also need tools that allow you to analyze the log and detect potentially
                             anomalous actions. These tools can scan the log and find anomalous actions, and
                             thus help detect attacks and trace how the attacker gained access to the system.</p>
-                        <p>Apart from helping recover from failure, a log of user actions is useful because it
+                        <p class="indent-8 mt-4">Apart from helping recover from failure, a log of user actions is useful because it
                             acts as a deterrent to insider attacks. If people know that their actions are being
                             logged, then they are less likely to do unauthorized things. This is most effective for
                             casual attacks, such as a nurse looking up patient records, or for detecting attacks
@@ -357,14 +390,14 @@
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 6: Use redundancy and diversity to reduce risk</b></h2>
-                        <p>Redundancy means that you maintain more than one version of software or data in a
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 6: Use redundancy and diversity to reduce risk</b></h2>
+                        <p class="indent-8 mt-4">Redundancy means that you maintain more than one version of software or data in a
                             system. Diversity, when applied to software, means that the different versions should
                             not rely on the same platform or be implemented using the same technologies.
                             Therefore, a platform or technology vulnerability will not affect all versions and so
                             lead to a common failure. I explained in Chapter 13 how redundancy and diversity
                             are the fundamental mechanisms used in dependability engineering</p>
-                        <p>I have already discussed examples of redundancy—maintaining patient information on both the server and the client, firstly in the mental health-care system, and
+                        <p class="indent-8 mt-4">I have already discussed examples of redundancy—maintaining patient information on both the server and the client, firstly in the mental health-care system, and
                             then in the distributed equity trading system shown in Figure 14.5. In the patient
                             records system, you could use diverse operating systems on the client and the server
                             (e.g., Linux on the server, Windows on the client). This ensures that an attack based
@@ -375,8 +408,8 @@
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 7: Validate all inputs</b></h2>
-                        <P>A common attack on a system involves providing the system with unexpected inputs
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 7: Validate all inputs</b></h2>
+                        <P class="indent-8 mt-4">A common attack on a system involves providing the system with unexpected inputs
                             that cause it to behave in an unanticipated way. These may simply cause a system
                             crash, resulting in a loss of service, or the inputs could be made up of malicious code
                             that is executed by the system. Buffer overflow vulnerabilities, first demonstrated in
@@ -384,7 +417,7 @@
                             2001), may be triggered using long input strings. So-called ‘SQL poisoning’, where
                             a malicious user inputs an SQL fragment that is interpreted by a server, is another
                             fairly common attack.</P>
-                        <p>As I explained in Chapter 13, you can avoid many of these problems if you design
+                        <p class="indent-8 mt-4">As I explained in Chapter 13, you can avoid many of these problems if you design
                             input validation into your system. Essentially, you should never accept any input
                             without applying some checks to it. As part of the requirements, you should define
                             the checks that should be applied. You should use knowledge of the input to define
@@ -397,21 +430,21 @@
                     </article>
 
                     <article class="articles">
-                        <h2 class="text-2xl"><b>Guideline 8: Compartmentalize your assets</b></h2>
-                        <p>Compartmentalizing means that you should not provide all-or-nothing access to
+                        <h2 class="text-lg md:text-2xl"><b>Guideline 8: Compartmentalize your assets</b></h2>
+                        <p class="indent-8 mt-4">Compartmentalizing means that you should not provide all-or-nothing access to
                             information in a system. Rather, you should organize the information in a system
                             into compartments. Users should only have access to the information that they need,
                             rather than to all of the information in a system. This means that the effects of an
                             attack may be contained. Some information may be lost or damaged but it is unlikely
                             that all of the information in the system will be affected.</p>
-                        <p>For example, in the patient information system, you should design the system so
+                        <p class="indent-8 mt-4">For example, in the patient information system, you should design the system so
                             that at any one clinic, the clinic staff normally only have access to the records of
                             patients that have an appointment at that clinic. They should not normally have
                             access to all patient records in the system. Not only does this limit the potential loss
                             from insider attacks, it also means that if an intruder steals their credentials, then the
                             amount of damage that they can cause is limited.
                             </p>
-                        <p>Having said this, you also may have to have mechanisms in the system to grant unexpected access—say to a patient who is seriously ill and requires urgent treatment without an appointment. In those circumstances, you might use some alternative secure
+                        <p class="indent-8 mt-4">Having said this, you also may have to have mechanisms in the system to grant unexpected access—say to a patient who is seriously ill and requires urgent treatment without an appointment. In those circumstances, you might use some alternative secure
                             mechanism to override the compartmentalization in the system. In such situations,
                             where security is relaxed to maintain system availability, it is essential that you use a
                             logging mechanism to record system usage. You can then check the logs to trace any
@@ -419,8 +452,8 @@
                         </article>
 
                         <article class="articles">
-                            <h2 class="text-2xl"> <b>Guideline 9: Design for deployment</b></h2>
-                            <p>Many security problems arise because the system is not configured correctly when it is
+                            <h2 class="text-lg md:text-2xl"> <b>Guideline 9: Design for deployment</b></h2>
+                            <p class="indent-8 mt-4">Many security problems arise because the system is not configured correctly when it is
                                 deployed in its operational environment. You should therefore always design your
                                 system so that facilities are included to simplify deployment in the customer’s environment and to check for potential configuration errors and omissions in the deployed
                                 system. This is an important topic, which I cover in detail later in Section 14.2.3.
@@ -428,51 +461,51 @@
                         </article>
 
                         <article class="articles">
-                            <h2 class="text-2xl"><b> Guideline 10: Design for recoverability</b></h2>
-                            <p>Irrespective of how much effort you put into maintaining systems security, you
+                            <h2 class="text-lg md:text-2xl"><b> Guideline 10: Design for recoverability</b></h2>
+                            <p class="indent-8 mt-4">Irrespective of how much effort you put into maintaining systems security, you
                                 should always design your system with the assumption that a security failure could
                                 occur. Therefore, you should think about how to recover from possible failures and
                                 restore the system to a secure operational state. For example, you may include a
                                 backup authentication system in case your password authentication is compromised.</p>
-                            <p>For example, say an unauthorized person from outside the clinic gains access to
+                            <p class="indent-8 mt-4">For example, say an unauthorized person from outside the clinic gains access to
                                 the patient records system and you don’t know how they obtained a valid login/
                                 password combination. You need to reinitialize the authentication system and not
                                 just change the credentials used by the intruder. This is essential because the intruder
                                 may also have gained access to other user passwords. You need, therefore, to ensure
                                 that all authorized users change their passwords. You also must ensure that the unauthorized person does not have access to the password changing mechanism.</p>
-                            <p>You therefore have to design your system to deny access to everyone until they
+                            <p class="indent-8 mt-4">You therefore have to design your system to deny access to everyone until they
                                 have changed their password and to authenticate real users for password change assuming that their chosen passwords may not be secure. One way of doing this is to
                                 use a challenge/response mechanism, where users have to answer questions for
                                 which they have pre-registered answers. This is only invoked when passwords are
                                 changed, allowing for recovery from the attack with relatively little user disruption.</p>
-                                    <img src="14.7.png" alt="">
-                                        <p><b>Figure 14.7</b> Software deloyment</p>
+                                    <img id="tab4" src="14.7.png" alt="" class="mx-auto h-50 w-150 sm:h-100 sm:w-200 xl:h-80 xl:w-250  hover:scale-110 duration-300">
+                                        <p class="text-center"><i><b>Figure 14.7</b> Software deployment</i></p>
                         </article>
 
                         <article id="fortri" class="articles">
-                            <h3  class="text-3xl mb-2"><b>14.2.3 Design for deployment</b></h3>
+                            <h3  class="text-lg md:text-3xl mb-2"><b>14.2.3 Design for deployment</b></h3>
 
-                        <p>The deployment of a system involves configuring the software to operate in an operational environment, installing the system on the computers in that environment, and then
+                        <p class="indent-8 mt-4">The deployment of a system involves configuring the software to operate in an operational environment, installing the system on the computers in that environment, and then
                             configuring the installed system for these computers (Figure 14.7). Configuration may
                             be a simple process that involves setting some built-in parameters in the software to
                             reflect user preferences. Sometimes, however, configuration is complex and requires the
                             specific definition of business models and rules that affect the execution of the software</p>
-                        <p>It is at this stage of the software process that vulnerabilities in the software are
+                        <p class="indent-8 mt-4">It is at this stage of the software process that vulnerabilities in the software are
                             often accidentally introduced. For example, during installation, software often has
                             to be configured with a list of allowed users. When delivered, this list simply consists of a generic administrator login such as ‘admin’ and a default password, such
                             as ‘password’. This makes it easy for an administrator to set up the system. Their
                             first action should be to introduce a new login name and password, and to delete the
                             generic login name. However, it’s easy to forget to do this. An attacker who knows
                             of the default login may then be able to gain privileged access to the system.</p>
-                        <p>Configuration and deployment are often seen as system administration issues and
+                        <p class="indent-8 mt-4">Configuration and deployment are often seen as system administration issues and
                             so are considered to be outside the scope of software engineering processes.
                             Certainly, good management practice can avoid many security problems that arise
                             from configuration and deployment mistakes. However, software designers have the
                             responsibility to ‘design for deployment’. You should always provide built-in support for deployment that will reduce the probability that system administrators (or
                             users) will make mistakes when configuring the software.</p>
-                            <p>I recommend four ways to incorporate deployment support in a system:</p>
+                            <p class="indent-8 mt-4">I recommend four ways to incorporate deployment support in a system:</p>
                             <ol class="list-decimal list-inside pl-6 space-y-2" >
-                                <li><i><b>Include support for viewing and analyzing configurations </b></i> You should always
+                                <li class="indent-8 mt-4"><i><b>Include support for viewing and analyzing configurations </b></i> You should always
                                     include facilities in a system that allow administrators or permitted users to examine the current configuration of the system. This facility is, surprisingly, lacking
                                     from most software systems and users are frustrated by the difficulties of finding
                                     configuration settings. For example, in the version of the word processor that
@@ -480,20 +513,20 @@
                                     picture of a configuration, they are more likely to spot errors and omissions.
                                     Ideally, a configuration display should also highlight aspects of the configuration
                                     that are potentially unsafe—for example, if a password has not been set up</li>
-                                <li><i><b>Minimize default privileges</b></i> You should design software so that the default configuration of a system provides minimum essential privileges. This way, the
+                                <li class="indent-8 mt-4"><i><b>Minimize default privileges</b></i> You should design software so that the default configuration of a system provides minimum essential privileges. This way, the
                                     damage that any attacker can do can be limited. For example, the default system
                                     administrator authentication should only allow access to a program that enables
                                     an administrator to set up new credentials. It should not allow access to any
                                     other system facilities. Once the new credentials have been set up, the default
                                     login and password should be deleted automatically.</li>
-                                <li><i><b>Localize configuration</b></i> settings When designing system configuration support,
+                                <li class="indent-8 mt-4"><i><b>Localize configuration</b></i> settings When designing system configuration support,
                                     you should ensure that everything in a configuration that affects the same part of
                                     a system is set up in the same place. To use the word processor example again,
                                     in the version that I use, I can set up some security information, such as a password to control access to the document, using the Preferences/Security menu.
                                     Other information is set up in the Tools/Protect Document menu. If configuration information is not localized, it is easy to forget to set it up or, in some cases,
                                     not even be aware that some security facilities are included in the system.
                                 </li>
-                                <li><i><b>Provide easy ways to fix security vulnerabilities</b></i> You should include straightforward mechanisms for updating the system to repair security vulnerabilities that
+                                <li class="indent-8 mt-4"><i><b>Provide easy ways to fix security vulnerabilities</b></i> You should include straightforward mechanisms for updating the system to repair security vulnerabilities that
                                     have been discovered. These could include automatic checking for security
                                     updates, or downloading of these updates as soon as they are available. It is
                                     important that users cannot bypass these mechanisms as, inevitably, they will
@@ -505,7 +538,7 @@
         </section>
     </main>
     
-    <footer class="bg-gray-900 p-5">
+    <footer class="bg-gray-900 p-5 m-2 rounded-b-lg">
     <section>
         <p class="text-center text-gray-300">
         © 
