@@ -1,6 +1,18 @@
 @import "tailwindcss"; 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --secondary: #64748b;
+  --accent: #f59e0b;
+  --light: #f8fafc;
+  --dark: #1e293b;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+}
+
 @theme {
   --font-poppins: "Poppins", sans-serif;  
 }
@@ -244,112 +256,134 @@ html{
 /*END OF 14 .1 */
 
 
-#kim_eduard body {
+#FireFlyDeveloper main {
   @apply font-poppins m-0 p-0;
-  animation: fadeInBody 1.5s ease-in-out;
 }
 
-#kim_eduard header {
-  @apply bg-gray-900 text-white p-4 text-center;
-  animation: slideDown 1s ease-in-out;
+#FireFlyDeveloper header {
+  @apply bg-gray-900 text-white rounded-lg m-2 text-center;
 }
 
-#kim_eduard div {
-  @apply list-none m-0 flex justify-center bg-[#444] p-2 flex-wrap rounded-2xl;
+#FireFlyDeveloper header h1 {
+  @apply text-center text-3xl pt-3 pb-3
+    sm:text-4xl
+    md:text-5xl
+    lg:text-6xl
+    xl:text-7xl;
 }
 
-#kim_eduard div a {
-  @apply text-white no-underline transition-all duration-300 ease-in-out m-1 sm:m-2 md:m-3;
-}
-#kim_eduard div a:hover {
-  @apply scale-105 text-blue-400;
+#FireFlyDeveloper header ul {
+  @apply bg-gray-800 p-4 pt-1 pb-1 rounded-b-lg;
 }
 
-#kim_eduard main {
-  @apply p-4 sm:p-6 md:p-10 lg:p-16 xl:p-24 sm:pl-5 sm:pr-5 md:pl-10 md:pr-10 lg:pl-20 lg:pr-20 xl:pl-40 xl:pr-40;
-  animation: fadeInUp 1.2s ease-in-out;
+#FireFlyDeveloper .nav-container {
+  @apply grid grid-cols-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center text-center text-sm sm:text-base md:text-lg lg:text-lg m-0;
 }
 
-#kim_eduard section {
-  @apply mb-6 p-4 sm:p-6 md:p-8 bg-gray-200 rounded-lg shadow-md transition-all duration-500 ease-in-out;
-  animation: fadeInSection 1.2s ease-in-out;
-}
-#kim_eduard section:hover {
-  @apply shadow-lg scale-[1.01];
+#FireFlyDeveloper .nav-item:hover {
+  @apply bg-white/25 -translate-y-0.5;
 }
 
-#kim_eduard p {
-  @apply mb-2 text-justify tracking-wide text-base sm:text-lg md:text-xl transition-all duration-300 ease-in-out;
-}
-#kim_eduard p:hover {
-  @apply text-gray-700;
+#FireFlyDeveloper .nav-item.active {
+  @apply bg-white/30 font-semibold;
 }
 
-#kim_eduard h3 {
-  @apply font-bold relative inline-block text-lg sm:text-xl md:text-2xl;
-}
-#kim_eduard h3::after {
-  content: "";
-  @apply block bg-gray-900 h-[2px] w-0 transition-all duration-500 ease-in-out;
-}
-#kim_eduard h3:hover::after {
-  @apply w-full;
+#FireFlyDeveloper main {
+  @apply bg-white p-8 shadow-md max-w-[1200px] mx-auto px-10;
 }
 
-#kim_eduard main ul {
-  @apply list-disc ml-6 sm:ml-10;
+#FireFlyDeveloper main h1 {
+  @apply text-slate-800 text-4xl font-bold mt-0 mb-4 md:text-3xl sm:text-2xl xl:text-5xl;
 }
 
-#kim_eduard main ol {
-  @apply ml-6 sm:ml-10;
+#FireFlyDeveloper h2 {
+  @apply text-slate-800 text-3xl mt-6 mb-4 border-b-2 border-blue-500 pb-2 md:text-2xl sm:text-xl xl:text-4xl;
 }
 
-#kim_eduard em {
-  @apply font-bold transition-all duration-300 ease-in-out;
-}
-#kim_eduard em:hover {
-  @apply text-gray-800;
+#FireFlyDeveloper h3 {
+  @apply text-2xl mt-6 mb-4 text-blue-500;
 }
 
-#kim_eduard footer {
-  @apply bg-[#333] text-white text-center p-4 sm:p-6 md:p-8;
-  animation: fadeInFooter 1.5s ease-in-out;
+#FireFlyDeveloper main p {
+  @apply mb-5;
 }
 
-#kim_eduard img {
-  @apply border rounded-lg shadow-md m-4 sm:m-6 md:m-10 max-w-full h-auto transition-transform duration-700 ease-in-out;
-  animation: zoomIn 1s ease-in-out;
-}
-#kim_eduard img:hover {
-  @apply scale-105 shadow-xl;
+#FireFlyDeveloper ul, #FireFlyDeveloper ol {
+  @apply mb-6 pl-6;
 }
 
-@keyframes fadeInBody {
-  from { opacity: 0; }
-  to { opacity: 1; }
+#FireFlyDeveloper main li {
+  @apply mb-2 list-disc;
 }
 
-@keyframes slideDown {
-  from { transform: translateY(-30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+#FireFlyDeveloper .key-concept {
+  @apply bg-blue-50 border-l-4 border-blue-500 p-6 my-6 rounded-r-lg;
 }
 
-@keyframes fadeInUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+#FireFlyDeveloper .interactive-box {
+  @apply bg-slate-50 border border-slate-200 rounded-lg p-6 my-6 transition-all duration-300;
 }
 
-@keyframes fadeInSection {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+#FireFlyDeveloper .interactive-box:hover {
+  @apply shadow-md -translate-y-0.5;
 }
 
-@keyframes fadeInFooter {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+#FireFlyDeveloper .strategy-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 my-8 sm:grid-cols-1 xl:grid-cols-3;
 }
 
-@keyframes zoomIn {
-  from { transform: scale(0.95); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+#FireFlyDeveloper .strategy-card {
+  @apply bg-white rounded-lg p-6 shadow-sm border-t-4 border-blue-500 transition-all duration-300;
+}
+
+#FireFlyDeveloper .strategy-card:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+#FireFlyDeveloper .strategy-card.resistance {
+  @apply border-t-green-500;
+}
+
+#FireFlyDeveloper .strategy-card.recognition {
+  @apply border-t-amber-500;
+}
+
+#FireFlyDeveloper .strategy-card.recovery {
+  @apply border-t-red-500;
+}
+
+#FireFlyDeveloper .case-study {
+  @apply bg-blue-50 border border-blue-200 rounded-lg p-6 my-8;
+}
+
+#FireFlyDeveloper .case-study h3 {
+  @apply text-blue-700 mt-0;
+}
+
+#FireFlyDeveloper .visual-element {
+  @apply w-full max-w-2xl mx-auto my-6 block rounded-lg shadow-md;
+}
+
+#FireFlyDeveloper .key-points {
+  @apply bg-amber-50 border border-amber-200 rounded-lg p-6 my-8;
+}
+
+#FireFlyDeveloper .key-points h3 {
+  @apply text-slate-800 mt-0;
+}
+
+#FireFlyDeveloper .exercise {
+  @apply bg-slate-100 border-l-4 border-slate-400 p-6 my-6 rounded-r-lg;
+}
+
+#FireFlyDeveloper .exercise h4 {
+  @apply mt-0 text-slate-800;
+}
+
+#FireFlyDeveloper .definition {
+  @apply bg-slate-50 border-l-4 border-slate-400 py-4 px-6 my-4 rounded-r-lg;
+}
+
+#FireFlyDeveloper .definition strong {
+  @apply text-blue-500;
 }
