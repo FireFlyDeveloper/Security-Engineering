@@ -305,7 +305,7 @@ html{
 }
 
 #FireFlyDeveloper main p {
-  @apply mb-5;
+  @apply mb-5 text-lg text-justify;
 }
 
 #FireFlyDeveloper ul, #FireFlyDeveloper ol {
@@ -330,6 +330,10 @@ html{
 
 #FireFlyDeveloper .strategy-grid {
   @apply grid grid-cols-1 md:grid-cols-3 gap-6 my-8 sm:grid-cols-1 xl:grid-cols-3;
+}
+
+#FireFlyDeveloper .strategy-grid p {
+  @apply text-left;
 }
 
 #FireFlyDeveloper .strategy-card {
